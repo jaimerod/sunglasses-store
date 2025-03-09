@@ -1,0 +1,19 @@
+uuid: ccadfac2-45cd-46c0-939c-7a0723d63674
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.collapsible_item
+    - field.storage.block_content.field_css_classes
+id: block_content.collapsible_item.field_css_classes
+field_name: field_css_classes
+entity_type: block_content
+bundle: collapsible_item
+label: 'CSS Classes'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

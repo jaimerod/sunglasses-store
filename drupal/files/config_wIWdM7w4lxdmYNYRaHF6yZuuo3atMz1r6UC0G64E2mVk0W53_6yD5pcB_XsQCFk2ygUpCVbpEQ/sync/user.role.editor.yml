@@ -1,0 +1,134 @@
+uuid: 4ac7d963-554f-45b0-9bd4-01b0805d26d0
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.node.page.default
+    - filter.format.full_html
+    - media.type.audio
+    - media.type.document
+    - media.type.image
+    - media.type.remote_video
+    - media.type.video
+    - node.type.page
+    - taxonomy.vocabulary.tags
+  module:
+    - block
+    - block_content
+    - contextual
+    - file
+    - filter
+    - google_tag
+    - help
+    - layout_builder
+    - media
+    - metatag
+    - node
+    - path
+    - shortcut
+    - system
+    - taxonomy
+    - toolbar
+    - update
+    - views_ui
+    - webform
+id: editor
+label: Editor
+weight: 3
+is_admin: null
+permissions:
+  - 'access administration pages'
+  - 'access any webform configuration'
+  - 'access block library'
+  - 'access content overview'
+  - 'access contextual links'
+  - 'access help pages'
+  - 'access media overview'
+  - 'access own webform configuration'
+  - 'access site in maintenance mode'
+  - 'access site reports'
+  - 'access taxonomy overview'
+  - 'access toolbar'
+  - 'access user profiles'
+  - 'access webform help'
+  - 'access webform overview'
+  - 'access webform submission user'
+  - 'administer block content'
+  - 'administer block types'
+  - 'administer blocks'
+  - 'administer content types'
+  - 'administer filters'
+  - 'administer google_tag_container'
+  - 'administer menu'
+  - 'administer meta tags'
+  - 'administer modules'
+  - 'administer nodes'
+  - 'administer shortcuts'
+  - 'administer site configuration'
+  - 'administer software updates'
+  - 'administer taxonomy'
+  - 'administer themes'
+  - 'administer url aliases'
+  - 'administer views'
+  - 'administer webform'
+  - 'administer webform element access'
+  - 'administer webform submission'
+  - 'configure editable page node layout overrides'
+  - 'create and edit custom blocks'
+  - 'create audio media'
+  - 'create document media'
+  - 'create image media'
+  - 'create media'
+  - 'create page content'
+  - 'create remote_video media'
+  - 'create terms in tags'
+  - 'create url aliases'
+  - 'create video media'
+  - 'create webform'
+  - 'customize shortcut links'
+  - 'delete any audio media'
+  - 'delete any document media'
+  - 'delete any image media'
+  - 'delete any page content'
+  - 'delete any remote_video media'
+  - 'delete any video media'
+  - 'delete any webform'
+  - 'delete any webform submission'
+  - 'delete media'
+  - 'delete own audio media'
+  - 'delete own document media'
+  - 'delete own files'
+  - 'delete own image media'
+  - 'delete own page content'
+  - 'delete own remote_video media'
+  - 'delete own video media'
+  - 'delete own webform submission'
+  - 'delete terms in tags'
+  - 'edit any audio media'
+  - 'edit any document media'
+  - 'edit any image media'
+  - 'edit any page content'
+  - 'edit any remote_video media'
+  - 'edit any video media'
+  - 'edit any webform'
+  - 'edit own audio media'
+  - 'edit own document media'
+  - 'edit own image media'
+  - 'edit own page content'
+  - 'edit own remote_video media'
+  - 'edit own video media'
+  - 'edit own webform'
+  - 'edit own webform submission'
+  - 'edit terms in tags'
+  - 'edit webform assets'
+  - 'revert page revisions'
+  - 'switch shortcut sets'
+  - 'update media'
+  - 'use text format full_html'
+  - 'view all revisions'
+  - 'view own unpublished content'
+  - 'view own unpublished media'
+  - 'view own webform submission'
+  - 'view page revisions'
+  - 'view the administration theme'
+  - 'view update notifications'

@@ -1,0 +1,5 @@
+section:not(.full-width):not(.isi) {
+  @include clearfix();
+  @include make-row();
+  @include full-width();
+}

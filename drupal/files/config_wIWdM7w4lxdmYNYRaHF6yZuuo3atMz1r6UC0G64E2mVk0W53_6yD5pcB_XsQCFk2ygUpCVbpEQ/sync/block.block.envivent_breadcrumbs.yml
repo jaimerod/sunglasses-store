@@ -1,0 +1,22 @@
+uuid: 4b15e10a-d9dc-4bc3-8d0b-312b355ef113
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - envivent
+_core:
+  default_config_hash: oXUb3JZR2WW5VOdw4HrhRicCsq51mCgLfRyvheG68ck
+id: envivent_breadcrumbs
+theme: envivent
+region: content
+weight: -3
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }

@@ -1,0 +1,22 @@
+uuid: f6155067-93dc-4521-9bb9-6cc7176f6a4b
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - envivent
+_core:
+  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
+id: envivent_help
+theme: envivent
+region: content
+weight: -2
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

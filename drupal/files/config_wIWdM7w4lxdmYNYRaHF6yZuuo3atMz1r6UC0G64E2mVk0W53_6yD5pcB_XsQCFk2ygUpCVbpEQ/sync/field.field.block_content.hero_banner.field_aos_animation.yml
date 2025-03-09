@@ -1,0 +1,21 @@
+uuid: c2117bad-5052-4ed8-88f7-cc3a0d64625d
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.hero_banner
+    - field.storage.block_content.field_aos_animation
+  module:
+    - options
+id: block_content.hero_banner.field_aos_animation
+field_name: field_aos_animation
+entity_type: block_content
+bundle: hero_banner
+label: 'AOS Animation'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

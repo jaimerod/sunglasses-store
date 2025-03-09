@@ -1,0 +1,9 @@
+2025-01-31 00:49:11 startup archives unpack
+2025-01-31 00:49:11 install wget:amd64 <none> 1.21.3-1+b2
+2025-01-31 00:49:11 status half-installed wget:amd64 1.21.3-1+b2
+2025-01-31 00:49:11 status unpacked wget:amd64 1.21.3-1+b2
+2025-01-31 00:49:11 startup packages configure
+2025-01-31 00:49:11 configure wget:amd64 1.21.3-1+b2 <none>
+2025-01-31 00:49:11 status unpacked wget:amd64 1.21.3-1+b2
+2025-01-31 00:49:11 status half-configured wget:amd64 1.21.3-1+b2
+2025-01-31 00:49:11 status installed wget:amd64 1.21.3-1+b2

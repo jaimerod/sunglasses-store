@@ -1,0 +1,14 @@
+favicon:
+  use_default: true
+features:
+  comment_user_picture: true
+  comment_user_verification: true
+  favicon: true
+  node_user_picture: true
+logo:
+  use_default: true
+envivent_back_to_top: 1
+envivent_fixed_isi: 1
+envivent_scrolling_isi: 1
+envivent_sticky_header_desktop: 1
+envivent_sticky_header_mobile: 1

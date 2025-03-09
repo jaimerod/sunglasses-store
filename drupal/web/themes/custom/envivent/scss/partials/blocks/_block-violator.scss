@@ -1,0 +1,48 @@
+$violator-background-color: $gray !default;
+
+.violator {
+  display: none;
+  background-color: $violator-background-color;
+
+  &.active {
+    @include full-width();
+
+    display: block;
+    position: relative;
+    padding: 16px 0;
+
+    > div {
+      @include make-container();
+
+      > div {
+        @include make-row();
+
+        > div {
+          @include make-col(12);
+        }
+      }
+
+    }
+
+    button {
+      position: absolute;
+      top: 50%;
+      right: 0px;
+      transform: translateY(-50%);
+      z-index: 100;
+      width: 44px;
+      height: 44px;
+      background-color: transparent;
+      border: 0;
+      font-family: Arial;
+
+      @include breakpoint('xlarge') {
+        right: calc((100vw - 1200px) / 2);
+      }
+    };
+
+    p {
+      margin: 0;
+    }
+  }
+}

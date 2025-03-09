@@ -1,0 +1,172 @@
+sup {
+  font-size: 65%;
+}
+
+%header {
+  color: $black;
+  font-family: 'Roboto Slab', sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 48px;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  sup {
+    font-size: 12px;
+    top: -1.3em;
+  }
+
+  @include breakpoint($desktop) {
+    font-size: 56px;
+    line-height: 72px;
+
+    sup {
+      font-size: 21px;
+    }
+  }
+}
+
+%subheader {
+  @extend %header;
+  font-size: 36px;
+  line-height: 48px;
+
+  @include breakpoint($desktop) {
+    font-size: 56px;
+    line-height: 68px;
+  }
+}
+
+%bodycopy {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  line-height: 32px;
+  color: $body-text-color;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+%menucopy {
+  @extend %header;
+  font-size: 21px;
+  font-weight: normal;
+  line-height: 25px;
+
+  @include breakpoint($desktop) {
+    font-size: 16px;
+    line-height: 19px;
+  }
+}
+
+%footercopy {
+  @extend %bodycopy;
+  color: $white;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+%footnote {
+  font-size: 10px;
+  line-height: 22px;
+  color: $body-text-color;
+
+  &.small-line-height {
+    line-height: 17px;
+  }
+}
+
+%subsubheader {
+  @extend %subheader;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 400;
+
+  @include breakpoint($desktop) {
+    font-size: 36px;
+    line-height: 40px;
+  }
+}
+
+%subsubsubheader {
+  @extend %subheader;
+  font-size: 21px;
+  line-height: 32px;
+  font-weight: 600;
+
+  @include breakpoint($desktop) {
+    font-size: 21px;
+    line-height: 32px;
+  }
+}
+
+.layout-container, .mfp-container {
+  h1 {
+    @extend %header;
+  }
+
+  h2 {
+    @extend %subheader;
+    margin-top: 39px;
+  }
+
+  h3 {
+    @extend %subsubheader;
+    margin-top: 32px;
+
+    @include breakpoint($desktop) {
+      margin-top: 32px;
+    }
+  }
+
+  h4 {
+    @extend %subsubsubheader;
+    margin-bottom: 6px;
+  }
+
+  h5 {
+    @extend %subheader;
+
+    color: $blue;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 24px;
+  }
+
+  p, li {
+    @extend %bodycopy;
+  }
+
+  p.footnote {
+    @extend %footnote;
+  }
+
+  a {
+    @extend %bodycopy;
+  }
+
+  nav li a {
+    @extend %menucopy;
+  }
+
+  footer {
+    h2 {
+      font-size: 15px;
+    }
+
+    p, li, a {
+      @extend %footercopy;
+    }
+
+    a {
+      text-decoration: none;
+
+      &:hover {
+        color: $black;
+      }
+    }
+  }
+}

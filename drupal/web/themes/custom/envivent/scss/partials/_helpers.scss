@@ -1,0 +1,85 @@
+.mobile-hide  { @include breakpoint-only($mobile)  { display: none; }}
+.tablet-hide  { @include breakpoint-only($tablet)  { display: none; }}
+.desktop-hide { @include breakpoint('medium')      { display: none; }}
+
+.mobile-only {
+  @include breakpoint($tablet) {
+    display: none;
+  }
+}
+
+.tablet-only {
+  display: none;
+
+  @include breakpoint($tablet) {
+    display: block !important;
+  }
+}
+
+.desktop-only {
+  display: none;
+
+  @include breakpoint($desktop) {
+    display: block;
+  }
+}
+
+.flip > div {
+  @media (max-width: $tablet-breakpoint - 1) {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
+.break-space {
+  position: relative;
+  z-index: 200;
+
+  .embedded-entity {
+    margin: 0 auto;
+    margin-bottom: -200px;
+    margin-top: 25px;
+    max-width: 200px;
+    padding-left: 5vw;
+
+    @include breakpoint($tablet) {
+      margin-bottom: -18vw;
+      margin-left: -40px;
+      margin-top: -12vw;
+      max-width: 300px;
+      padding-left: 0;
+      width: 250px;
+    }
+
+    @include breakpoint('medium') {
+      margin-bottom: -12vw;
+      margin-top: -7vw;
+      width: auto;
+    }
+
+    @media (min-width: $desktop-breakpoint) and (max-width: $desktop-breakpoint) {
+      margin-bottom: -15vw;
+      margin-top: -7vw;
+    }
+  }
+}
+
+.break-push {
+  padding-top: 160px !important;
+
+  @include breakpoint('small') {
+    padding-top: 9vw !important;
+  }
+}
+
+.no-wrap, .nowrap {
+  white-space: nowrap;
+}
+
+.align-center {
+  img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+}

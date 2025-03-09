@@ -1,0 +1,25 @@
+uuid: 4a9acdb9-b9a4-470e-ab11-6ffb6ddec9b5
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.top-menu
+  module:
+    - system
+  theme:
+    - envivent
+id: topmenu
+theme: envivent
+region: top_bar
+weight: -4
+provider: null
+plugin: 'system_menu_block:top-menu'
+settings:
+  id: 'system_menu_block:top-menu'
+  label: 'Top Menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: true
+visibility: {  }

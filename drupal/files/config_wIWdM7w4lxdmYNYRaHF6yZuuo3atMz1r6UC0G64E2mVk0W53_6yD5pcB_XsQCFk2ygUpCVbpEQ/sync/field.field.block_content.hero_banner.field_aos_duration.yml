@@ -1,0 +1,25 @@
+uuid: c5b4bb6e-4127-4728-b20f-1a4a20444403
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.hero_banner
+    - field.storage.block_content.field_aos_duration
+id: block_content.hero_banner.field_aos_duration
+field_name: field_aos_duration
+entity_type: block_content
+bundle: hero_banner
+label: 'AOS Duration'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1200
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ms
+field_type: integer

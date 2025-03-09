@@ -1,0 +1,210 @@
+.webform-required {
+  display: none;
+}
+
+div[aria-label='Error message'] {
+  display: none;
+}
+
+.js-form-item.error {
+  &:after {
+    display: block;
+    content: attr(data-webform-required-error);
+    color: $red;
+    text-align: right;
+    font-style: italic;
+  }
+
+  input,
+  select,
+  textarea {
+    color: $red;
+    border-width: 2px;
+    border-color: $red;
+
+    &::placeholder {
+      color: $red !important;
+    }
+  }
+
+  .select2-container--default {
+    border-bottom: 2px solid $red;
+
+    .select2-selection--single {
+      .select2-selection__rendered {
+        color: $red;
+      }
+    }
+  }
+}
+
+.form-required:after {
+  content: "*";
+  display: inline-block;
+}
+
+.form-item--error-message {
+  text-align: right;
+  font-style: italic;
+  color: $red;
+}
+
+.js-form-type-checkbox {
+  margin-left: 0 !important;
+}
+
+.webform-address--wrapper.error {
+  &:after {
+    display: none;
+  }
+}
+
+form {
+  @extend %bodycopy;
+
+  &.submitted {
+    input,
+    select,
+    label {
+      &:invalid {
+        color: $red;
+        border-width: 2px;
+        border-color: $red;
+      }
+    }
+  }
+
+  fieldset.webform-composite-hidden-title {
+    margin: 0;
+    padding: 0;
+  }
+
+  textarea {
+    width: 100%;
+  }
+
+  .js-webform-type-checkboxes {
+    margin-top: 24px;
+
+    legend {
+      margin-bottom: 16px;
+    }
+  }
+
+  .js-form-type-checkbox {
+    display: flex;
+
+    input[type=checkbox] {
+      box-shadow: 0;
+      position: relative;
+      top: 6px;
+
+      &:checked {
+        &:before {
+          color: $black;
+        }
+      }
+    }
+
+    input:checked + label:before {
+      color: $black;
+      background-position: 0 -17px;
+    }
+
+    label {
+      margin: -4px 0 12px;
+      padding-left: 12px;
+      position: relative;
+      font-size: 18px;
+      font-family: "Open Sans", sans-serif;
+      text-transform: none;
+
+      &:before {
+        background: url('../../dist/images/checkbox.png');
+        content: '';
+        display: block;
+        height: 17px;
+        left: -12px;
+        position: absolute;
+        top: 4px;
+        width: 17px;
+
+        @include breakpoint($tablet) {
+          top: 7px;
+        }
+      }
+    }
+  }
+
+  label {
+    display: block;
+    margin: 24px 0 6px;
+    text-transform: uppercase;
+    font-family: 'Roboto Slab', sans-serif;
+    font-size: 14px;
+    color: #6B6D75;
+  }
+
+  input:not([type=checkbox]):not([type=submit]) {
+    border: 0;
+    border-bottom: 1px solid #C2D1D9;
+    margin: -12px 0 12px;
+    padding: 12px 0;
+    width: 100%;
+    border-radius: 0;
+
+    &::placeholder {
+      color: #C9C9CC;
+    }
+  }
+
+  .select2-container--default {
+    border-bottom: 1px solid #C2D1D9;
+    padding-bottom: 7px;
+    margin-bottom: 12px;
+
+    .select2-selection--single {
+      border: 0;
+      margin: #{$grid-gutters-xsmall * -1} 0 12px;
+      padding: 12px 0;
+      width: 100%;
+
+      .select2-selection__arrow {
+        top: 14px;
+      }
+
+      .select2-selection__rendered {
+        padding: 0;
+      }
+    }
+  }
+
+  input.webform-button--submit {
+    @extend .button;
+    margin: 24px 0;
+  }
+}
+
+.select2-results__option,
+.select2-search__field {
+  @extend %bodycopy;
+  font-weight: bold;
+}
+
+//////////
+
+input[type=text],
+input[type=email],
+input[type=tel],
+.select2-container--default .select2-selection--single {
+  background-color: transparent;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+  color: $body-text-color;
+}
+
+form .select2-container--default .select2-selection--single .select2-selection__arrow {
+  top: 5px;
+  right: 10px;
+}

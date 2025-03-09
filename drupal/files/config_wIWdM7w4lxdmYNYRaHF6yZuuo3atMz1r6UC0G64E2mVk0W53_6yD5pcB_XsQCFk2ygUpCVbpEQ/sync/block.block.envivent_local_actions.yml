@@ -1,0 +1,20 @@
+uuid: dc1fdb60-c055-4bef-8737-533198ee9b57
+langcode: en
+status: true
+dependencies:
+  theme:
+    - envivent
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: envivent_local_actions
+theme: envivent
+region: content
+weight: -4
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

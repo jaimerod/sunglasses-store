@@ -1,0 +1,98 @@
+uuid: dc3fbdfe-3166-4fed-9896-ecf86bb80c05
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.collapsible_item
+    - field.field.block_content.collapsible_item.body
+    - field.field.block_content.collapsible_item.field_css_classes
+    - field.field.block_content.collapsible_item.field_css_id
+    - field.field.block_content.collapsible_item.field_css_style_block
+    - field.field.block_content.collapsible_item.field_grouping
+    - field.field.block_content.collapsible_item.field_heading
+    - field.field.block_content.collapsible_item.field_hide_on_desktop
+    - field.field.block_content.collapsible_item.field_hide_on_mobile
+    - field.field.block_content.collapsible_item.field_hide_on_tablet
+  module:
+    - field_group
+    - text
+third_party_settings:
+  field_group:
+    group_css_style_settings:
+      children:
+        - field_css_id
+        - field_css_classes
+        - field_css_style_block
+      label: 'CSS Style Settings'
+      region: hidden
+      parent_name: ''
+      weight: 20
+      format_type: details_sidebar
+      format_settings:
+        classes: ''
+        id: ''
+        open: false
+        description: ''
+        required_fields: true
+        weight: 0
+    group_responsive_settings:
+      children:
+        - field_hide_on_mobile
+        - field_hide_on_tablet
+        - field_hide_on_desktop
+      label: 'Responsive Settings'
+      region: hidden
+      parent_name: ''
+      weight: 20
+      format_type: details_sidebar
+      format_settings:
+        classes: ''
+        id: ''
+        open: false
+        description: ''
+        required_fields: true
+        weight: 0
+id: block_content.collapsible_item.default
+targetEntityType: block_content
+bundle: collapsible_item
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 2
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+  field_grouping:
+    type: options_select
+    weight: 26
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_heading:
+    type: text_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  field_css_classes: true
+  field_css_id: true
+  field_css_style_block: true
+  field_hide_on_desktop: true
+  field_hide_on_mobile: true
+  field_hide_on_tablet: true

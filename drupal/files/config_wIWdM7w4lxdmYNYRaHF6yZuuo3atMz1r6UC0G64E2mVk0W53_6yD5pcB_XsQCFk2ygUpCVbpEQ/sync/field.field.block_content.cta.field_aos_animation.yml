@@ -1,0 +1,21 @@
+uuid: fcd88ce3-8fd0-49c9-b69a-f1bc39818683
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.cta
+    - field.storage.block_content.field_aos_animation
+  module:
+    - options
+id: block_content.cta.field_aos_animation
+field_name: field_aos_animation
+entity_type: block_content
+bundle: cta
+label: 'AOS Animation'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

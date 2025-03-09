@@ -1,0 +1,19 @@
+uuid: 738e98c0-2812-4e49-8ad3-3768359c7ba7
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.basic
+    - field.storage.block_content.field_css_style_block
+id: block_content.basic.field_css_style_block
+field_name: field_css_style_block
+entity_type: block_content
+bundle: basic
+label: 'CSS Style Block'
+description: 'A CSS style block to allow styling directly in the CMS'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

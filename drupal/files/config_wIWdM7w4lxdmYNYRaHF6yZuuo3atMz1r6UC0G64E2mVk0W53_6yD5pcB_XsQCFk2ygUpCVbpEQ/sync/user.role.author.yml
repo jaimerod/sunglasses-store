@@ -1,0 +1,82 @@
+uuid: 94f5710e-a844-4075-b938-2b8815754fe9
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.node.page.default
+    - filter.format.full_html
+    - media.type.audio
+    - media.type.document
+    - media.type.image
+    - media.type.remote_video
+    - media.type.video
+    - node.type.page
+    - taxonomy.vocabulary.tags
+  module:
+    - contextual
+    - file
+    - filter
+    - layout_builder
+    - media
+    - metatag
+    - node
+    - path
+    - shortcut
+    - system
+    - taxonomy
+    - toolbar
+    - webform
+id: author
+label: Author
+weight: 4
+is_admin: null
+permissions:
+  - 'access content overview'
+  - 'access contextual links'
+  - 'access media overview'
+  - 'access own webform configuration'
+  - 'access site in maintenance mode'
+  - 'access taxonomy overview'
+  - 'access toolbar'
+  - 'access webform help'
+  - 'access webform overview'
+  - 'administer filters'
+  - 'administer menu'
+  - 'administer meta tags'
+  - 'administer taxonomy'
+  - 'administer url aliases'
+  - 'configure editable page node layout overrides'
+  - 'create and edit custom blocks'
+  - 'create audio media'
+  - 'create document media'
+  - 'create image media'
+  - 'create media'
+  - 'create page content'
+  - 'create remote_video media'
+  - 'create terms in tags'
+  - 'create url aliases'
+  - 'create video media'
+  - 'create webform'
+  - 'customize shortcut links'
+  - 'delete media'
+  - 'delete own files'
+  - 'delete own image media'
+  - 'delete own page content'
+  - 'delete own remote_video media'
+  - 'delete own video media'
+  - 'delete own webform submission'
+  - 'edit own audio media'
+  - 'edit own document media'
+  - 'edit own image media'
+  - 'edit own remote_video media'
+  - 'edit own video media'
+  - 'edit own webform'
+  - 'edit terms in tags'
+  - 'revert page revisions'
+  - 'update media'
+  - 'use text format full_html'
+  - 'view all revisions'
+  - 'view own unpublished content'
+  - 'view own unpublished media'
+  - 'view page revisions'
+  - 'view the administration theme'

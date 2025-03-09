@@ -1,0 +1,53 @@
+@import '../../node_modules/magnific-popup/dist/magnific-popup.css';
+
+.mfp-bg {
+  z-index: 600;
+  background-color: black;
+}
+
+.mfp-iframe-holder {
+  .mfp-close {
+    color: $black;
+    right: 0;
+    top: -8px;
+  }
+
+  .mfp-iframe-scaler {
+    overflow: visible;
+    padding-top: 73%;
+
+    @include breakpoint($tablet) {
+      padding-top: 64.35%;
+    }
+
+    @include breakpoint($desktop) {
+      padding-top: 63%;
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      background: url(../../dist/images/cfx_sig_hz_rgb_grade.svg);
+      width: 129px;
+      height: 42px;
+      background-color: $white;
+      position: relative;
+      top: -53px;
+      left: 22px;
+    }
+
+    iframe {
+      border: 24px solid $white;
+      border-bottom: 64px solid $white;
+    }
+  }
+}
+
+.mfp-content {
+  background-color: $white;
+  max-width: $desktop-max-width;
+}
+
+#popleave {
+  text-align: center;
+}

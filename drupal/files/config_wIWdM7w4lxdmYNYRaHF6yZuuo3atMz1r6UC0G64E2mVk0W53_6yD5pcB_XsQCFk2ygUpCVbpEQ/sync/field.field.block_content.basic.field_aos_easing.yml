@@ -1,0 +1,23 @@
+uuid: 530b2059-1c04-456b-9edd-15a9c78bc5a5
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.basic
+    - field.storage.block_content.field_aos_easing
+  module:
+    - options
+id: block_content.basic.field_aos_easing
+field_name: field_aos_easing
+entity_type: block_content
+bundle: basic
+label: 'AOS Easing'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: ease-in-out-back
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,23 @@
+uuid: 6a232ecf-840b-4566-a7d6-804936d82c3b
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.modal
+    - field.storage.block_content.field_hide_on_tablet
+id: block_content.modal.field_hide_on_tablet
+field_name: field_hide_on_tablet
+entity_type: block_content
+bundle: modal
+label: 'Hide on Tablet'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

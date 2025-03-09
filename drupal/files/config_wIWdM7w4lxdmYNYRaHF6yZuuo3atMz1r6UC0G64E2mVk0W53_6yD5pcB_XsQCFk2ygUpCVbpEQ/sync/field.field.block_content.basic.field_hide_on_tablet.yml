@@ -1,0 +1,23 @@
+uuid: 18ed0d59-d9f1-4c46-916c-300ecc4c5ffa
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.basic
+    - field.storage.block_content.field_hide_on_tablet
+id: block_content.basic.field_hide_on_tablet
+field_name: field_hide_on_tablet
+entity_type: block_content
+bundle: basic
+label: 'Hide on Tablet'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Hide
+  off_label: Show
+field_type: boolean

@@ -1,0 +1,8 @@
+uuid: 37025afc-5ccf-4c59-821c-255626c1ef34
+langcode: en
+status: true
+dependencies: {  }
+id: carousel_slide
+label: 'Carousel Slide'
+revision: true
+description: 'Create a new section and add these to automatically generate a carosel'

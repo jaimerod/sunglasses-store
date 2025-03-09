@@ -1,0 +1,29 @@
+uuid: 7040e606-82ab-47a5-9dcf-d8480104569a
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.collapsible_item
+    - field.storage.block_content.field_grouping
+    - taxonomy.vocabulary.collapsible_item_groups
+id: block_content.collapsible_item.field_grouping
+field_name: field_grouping
+entity_type: block_content
+bundle: collapsible_item
+label: Grouping
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      collapsible_item_groups: collapsible_item_groups
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

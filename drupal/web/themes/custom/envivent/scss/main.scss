@@ -1,0 +1,86 @@
+@import '../../node_modules/aos/dist/aos.css';
+
+// Aliases
+$mobile:  'xsmall';
+$tablet:  'small';
+$desktop: 'medium';
+
+// Modules and Variables
+$desktop-max-width: 1200px;
+
+$mobile-base-font-size:  16px;
+$tablet-base-font-size:  16px;
+$desktop-base-font-size: 16px;
+
+$mobile-padding:  24px;
+$tablet-padding:  24px;
+$desktop-padding: 24px;
+
+$section-padding-desktop: 100px;
+$section-padding-tablet:  60px;
+$section-padding-mobile:  25px;
+
+// Breakpoints
+$desktop-breakpoint: 1025px;
+$tablet-breakpoint:  768px;
+
+// Grid variables
+$grid-breakpoint-xsmall: 0px;
+$grid-breakpoint-small:  $tablet-breakpoint;
+$grid-breakpoint-medium: $desktop-breakpoint;
+$grid-breakpoint-large:  $desktop-breakpoint;
+$grid-breakpoint-xlarge: $desktop-breakpoint;
+
+$grid-columns-xsmall: 12;
+$grid-columns-small:  12;
+$grid-columns-medium: 12;
+$grid-columns-large:  12;
+$grid-columns-xlarge: 12;
+
+$grid-gutters-xsmall: 0.75rem;
+$grid-gutters-small:  0.75rem;
+$grid-gutters-medium: 0.75rem;
+$grid-gutters-large:  0.75rem;
+$grid-gutters-xlarge: 0.75rem;
+
+// Load all modules
+@import 'modules/all';
+
+// Partials
+@import 'partials/structure';
+@import 'partials/typography';
+@import 'partials/footer';
+@import 'partials/header';
+
+
+// Components
+@import 'partials/button';
+@import 'partials/forms';
+@import 'partials/grid-overlay';
+@import 'partials/helpers';
+@import 'partials/navigation';
+@import 'partials/rows';
+@import 'partials/system';
+@import 'partials/back-to-top';
+@import 'partials/carousel';
+@import 'partials/popup';
+
+// Blocks
+@import 'partials/blocks/block-basic';
+@import 'partials/blocks/block-collapsible-item';
+@import 'partials/blocks/block-cta';
+@import 'partials/blocks/block-hero-banner';
+@import 'partials/blocks/block-isi';
+@import 'partials/blocks/block-modal';
+@import 'partials/blocks/block-violator';
+
+// Layouts
+@import 'partials/layouts/layout-builder';
+@import 'partials/layouts/_layout-carousel.scss';
+@import 'partials/layouts/_layout-collapsible.scss';
+@import 'partials/layouts/_layout-modal.scss';
+
+
+
+// Page Specific
+@import 'partials/page-specific';

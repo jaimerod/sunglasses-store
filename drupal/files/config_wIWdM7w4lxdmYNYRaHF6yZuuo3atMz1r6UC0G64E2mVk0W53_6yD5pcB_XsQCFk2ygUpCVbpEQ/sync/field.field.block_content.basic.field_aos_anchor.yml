@@ -1,0 +1,23 @@
+uuid: 97250b76-c5d9-401b-bbfb-074313724e44
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.basic
+    - field.storage.block_content.field_aos_anchor
+  module:
+    - options
+id: block_content.basic.field_aos_anchor
+field_name: field_aos_anchor
+entity_type: block_content
+bundle: basic
+label: 'AOS Anchor'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: top-bottom
+default_value_callback: ''
+settings: {  }
+field_type: list_string

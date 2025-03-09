@@ -1,0 +1,23 @@
+uuid: eb739e20-7f95-4417-92c7-38514f3184f6
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.cta
+    - field.storage.block_content.field_hide_on_tablet
+id: block_content.cta.field_hide_on_tablet
+field_name: field_hide_on_tablet
+entity_type: block_content
+bundle: cta
+label: 'Hide on Tablet'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

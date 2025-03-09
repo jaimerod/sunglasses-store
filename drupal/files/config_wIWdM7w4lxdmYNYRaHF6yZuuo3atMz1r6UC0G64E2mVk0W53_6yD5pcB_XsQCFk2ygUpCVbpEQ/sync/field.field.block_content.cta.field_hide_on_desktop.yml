@@ -1,0 +1,23 @@
+uuid: ee2771df-324a-4385-995d-54c689fe5f59
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.cta
+    - field.storage.block_content.field_hide_on_desktop
+id: block_content.cta.field_hide_on_desktop
+field_name: field_hide_on_desktop
+entity_type: block_content
+bundle: cta
+label: 'Hide on Desktop'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

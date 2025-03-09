@@ -1,0 +1,21 @@
+uuid: 3b92f107-a62c-4327-874d-880c6e5d4446
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.cta
+    - field.storage.block_content.field_heading
+  module:
+    - text
+id: block_content.cta.field_heading
+field_name: field_heading
+entity_type: block_content
+bundle: cta
+label: Heading
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

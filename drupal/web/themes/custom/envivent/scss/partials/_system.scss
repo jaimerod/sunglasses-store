@@ -1,0 +1,80 @@
+
+$border-color: $black;
+
+#block-envivent-local-tasks,
+#block-envivent-primary-local-tasks {
+  @include make-container();
+
+  ul {
+    @include make-col(12);
+    border-bottom: 1px solid $border-color;
+    height: 28px;
+    list-style: none;
+    padding: 0;
+
+    li {
+      display: inline;
+
+      a {
+        font-size: 11px;
+        padding: 4px 12px 2px;
+        text-decoration: none;
+
+        &:hover {
+          color: $orange;
+        }
+
+        &.is-active {
+          border: 1px solid $border-color;
+          border-bottom: 1px solid $white;
+          border-radius: 3px 3px 0 0;
+        }
+      }
+    }
+  }
+}
+
+div[data-drupal-messages] {
+  @include make-container();
+
+  > div {
+    @include make-col(12);
+    background-color: $red;
+    color: $yellow;
+    padding: 12px;
+
+    a {
+      color: $white;
+    }
+  }
+}
+
+.user-login-form {
+  @include make-row();
+
+  > .js-form-item {
+    @include make-col(12);
+    @include make-md-col(6);
+    @include make-md-offset(3);
+  }
+
+  .form-actions {
+    @include make-col(12);
+    @include make-md-col(6  );
+    @include make-md-offset(3);
+
+    input {
+      width: 100%;
+    }
+  }
+}
+
+#block-envivent-help {
+  @include make-container();
+  
+  margin-bottom: 24px;
+
+  p {
+    margin: 0;
+  }
+}

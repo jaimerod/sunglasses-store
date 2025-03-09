@@ -1,0 +1,5 @@
+# Schema for the configuration files of the envivent theme.
+
+envivent.settings:
+  type: theme_settings
+  label: 'envivent settings'

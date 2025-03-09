@@ -1,0 +1,23 @@
+uuid: 765e6f95-701e-4b23-9074-b550b1f82dc5
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.hero_banner
+    - field.storage.block_content.field_hide_on_desktop
+id: block_content.hero_banner.field_hide_on_desktop
+field_name: field_hide_on_desktop
+entity_type: block_content
+bundle: hero_banner
+label: 'Hide on Desktop'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Hide
+  off_label: Show
+field_type: boolean

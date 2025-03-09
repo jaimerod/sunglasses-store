@@ -1,0 +1,50 @@
+uuid: 72431b5d-e264-4db7-9d44-f79c78209f6e
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.basic
+    - field.field.block_content.basic.body
+    - field.field.block_content.basic.field_aos_anchor
+    - field.field.block_content.basic.field_aos_animation
+    - field.field.block_content.basic.field_aos_duration
+    - field.field.block_content.basic.field_aos_easing
+    - field.field.block_content.basic.field_css_classes
+    - field.field.block_content.basic.field_css_id
+    - field.field.block_content.basic.field_css_style_block
+    - field.field.block_content.basic.field_hide_on_desktop
+    - field.field.block_content.basic.field_hide_on_mobile
+    - field.field.block_content.basic.field_hide_on_tablet
+  module:
+    - layout_builder
+    - text
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+_core:
+  default_config_hash: orJpHUlAc_wiQLMUjIgEJXGeiqylGHMPcmNRjGtct-M
+id: block_content.basic.default
+targetEntityType: block_content
+bundle: basic
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_aos_anchor: true
+  field_aos_animation: true
+  field_aos_duration: true
+  field_aos_easing: true
+  field_css_classes: true
+  field_css_id: true
+  field_css_style_block: true
+  field_hide_on_desktop: true
+  field_hide_on_mobile: true
+  field_hide_on_tablet: true
+  layout_builder__layout: true

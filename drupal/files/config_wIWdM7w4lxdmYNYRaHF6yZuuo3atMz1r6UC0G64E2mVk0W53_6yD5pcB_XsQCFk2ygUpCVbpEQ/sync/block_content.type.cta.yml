@@ -1,0 +1,8 @@
+uuid: d7731258-4dbe-4c8c-a563-55456f8a909c
+langcode: en
+status: true
+dependencies: {  }
+id: cta
+label: CTA
+revision: true
+description: 'Call to action with a header, image, link, and body copy'

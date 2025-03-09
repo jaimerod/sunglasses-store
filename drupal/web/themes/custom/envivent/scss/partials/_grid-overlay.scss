@@ -1,0 +1,31 @@
+.grid-overlay {
+  @include make-container();
+
+  height: 100%;
+  max-width: $desktop-max-width;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+  opacity: 5%;
+
+  @include breakpoint($desktop) {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.grid-overlay .col-1 {
+  @include make-col(1);
+
+  background-color: rgb(100, 100, 255);
+  border-left: $grid-gutters-xsmall solid rgb(100, 255, 0);
+  border-right: $grid-gutters-xsmall solid rgb(100, 255, 0);
+  color: rgb(0, 0, 0);
+  font-family: sans-serif;
+  font-size: 12px;
+  height: 9999px;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  text-align: center;
+}

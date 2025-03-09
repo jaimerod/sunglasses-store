@@ -1,0 +1,16 @@
+$layout-bottom-spacing-desktop: $section-padding-desktop;
+$layout-bottom-spacing-mobile:  $section-padding-mobile;
+$layout-top-spacing-desktop:    -1 * $section-padding-desktop;
+$layout-top-spacing-mobile:     -1 * $section-padding-mobile;
+
+.layout.layout--modals-layout {
+  .layout__region  {
+    margin: $layout-top-spacing-mobile 0 $layout-bottom-spacing-mobile 0;
+    padding: 0;
+
+    @include breakpoint($desktop) {
+      margin: $layout-top-spacing-desktop 0 $layout-bottom-spacing-desktop 0;
+
+    }
+  }
+}

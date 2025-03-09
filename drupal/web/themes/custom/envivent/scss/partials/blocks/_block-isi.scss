@@ -1,0 +1,88 @@
+$isi-background-color:       $white;
+$isi-border-color:           $gray;
+$isi-border-width:           1px;
+$isi-bottom-spacing-desktop: $section-padding-desktop;
+$isi-bottom-spacing-mobile:  $section-padding-mobile;
+$isi-desktop-height:         180px;
+$isi-min-height-desktop:     0px;
+$isi-min-height-mobile:      0px;
+$isi-read-more-color:        $blue;
+$isi-read-more-icon:         "\f063";
+$isi-read-more-size:         16px;
+$isi-top-spacing-desktop:    $section-padding-desktop;
+$isi-top-spacing-mobile:     $section-padding-mobile;
+
+section.isi {
+  @include make-container();
+
+  padding-bottom: $isi-bottom-spacing-mobile;
+  padding-top: $isi-top-spacing-mobile;
+  position: relative;
+  z-index: 11;
+
+  @include breakpoint($desktop) {
+    padding-bottom: $isi-bottom-spacing-desktop;
+    padding-top: $isi-top-spacing-desktop;
+  }
+
+  .fixed {
+    background-color: $isi-background-color;
+    border-top: $isi-border-width solid $isi-border-color;
+    bottom:0;
+    box-shadow: 0 0 64px rgba(0, 0, 0, 0.1);
+    left: 0;
+    padding-top: 32px;
+    position: fixed;
+    width: 100%;
+
+    .row {
+      margin: 0 auto;
+      max-height: $isi-desktop-height;
+      max-width: 1200px;
+      position: relative;
+
+      &.scrollable {
+        overflow-y: scroll;
+        -webkit-overflow-scrolling: touch;
+      }
+    }
+
+    .content {
+      @include make-col(12);
+    }
+
+    .read-more {
+        height: 44px;
+        position: absolute;
+        right: calc((100vw - 1200px) / 2);
+        text-decoration: none;
+        top: 0;
+        width: 44px;
+        z-index: 9999;
+
+        &:after {
+          font-family: "Font Awesome 5 Free"; font-weight: 900;
+          font-size: $isi-read-more-size;
+          content: $isi-read-more-icon;
+          display: block;
+          color: $isi-read-more-color;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+  }
+
+  .static {
+    @include make-row();
+
+    > div {
+      @include make-col(12);
+
+      ul {
+        padding-left: 20px;
+      }
+    }
+  }
+}

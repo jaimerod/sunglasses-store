@@ -1,0 +1,109 @@
+<?php
+use Drupal\Component\Utility\Html;
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter() for form templates.
+ * @param array $suggestions
+ * @param array $variables
+ */
+function envivent_theme_suggestions_block_alter(array &$suggestions, array $variables) {
+  // Block suggestions for custom block bundles.
+  if (isset($variables['elements']['content']['#block_content'])) {
+    array_splice($suggestions, 1, 0, 'block__bundle__' . $variables['elements']['content']['#block_content']->bundle());
+  }
+}
+
+function envivent_form_system_theme_settings_alter(
+  &$form,
+  \Drupal\Core\Form\FormStateInterface $form_state,
+  $form_id = NULL
+) {
+
+  // Work-around for a core bug affecting admin themes. See issue #943212.
+  if (isset($form_id)) {
+    return;
+  }
+
+  // Back to top settings
+  $form['back_to_top'] = array(
+    '#type'  => 'details',
+    '#title' => t('Back to top'),
+    '#open'  => TRUE,
+  );
+
+  $form['back_to_top']['envivent_back_to_top'] = array(
+    '#type'          => 'checkbox',
+    '#title'         => t('Back to top'),
+    '#default_value' => theme_get_setting('envivent_back_to_top'),
+    '#description'   => t("Enable Back to top functionality"),
+  );
+
+  // Back to top settings
+  $form['sticky_header'] = array(
+    '#type'  => 'details',
+    '#title' => t('Sticky Header'),
+    '#open'  => TRUE,
+  );
+
+  $form['sticky_header']['envivent_sticky_header_desktop'] = array(
+    '#type'          => 'checkbox',
+    '#title'         => t('Desktop'),
+    '#default_value' => theme_get_setting('envivent_sticky_header_desktop'),
+    '#description'   => t("Enables the sticky header on desktop"),
+  );
+
+  $form['sticky_header']['envivent_sticky_header_mobile'] = array(
+    '#type'          => 'checkbox',
+    '#title'         => t('Mobile'),
+    '#default_value' => theme_get_setting('envivent_sticky_header_mobile'),
+    '#description'   => t("Enables the sticky header on mobile"),
+  );
+
+  // ISI Settings
+  $form['isi'] = array(
+    '#type'  => 'details',
+    '#title' => t('ISI'),
+    '#open'  => TRUE,
+  );
+
+  $form['isi']['envivent_fixed_isi'] = array(
+    '#type'          => 'checkbox',
+    '#title'         => t('Fixed ISI'),
+    '#default_value' => theme_get_setting('envivent_fixed_isi'),
+    '#description'   => t("Enable the fixed ISI functionality"),
+  );
+
+  $form['isi']['envivent_scrolling_isi'] = array(
+    '#type'          => 'checkbox',
+    '#title'         => t('Scrolling ISI'),
+    '#default_value' => theme_get_setting('envivent_scrolling_isi'),
+    '#description'   => t("Enable the scrolling ISI functionality"),
+  );
+}
+
+function envivent_preprocess_html(&$variables) {
+  $variables['envivent_back_to_top'] =
+    theme_get_setting('envivent_back_to_top');
+  $variables['envivent_sticky_header_desktop'] =
+    theme_get_setting('envivent_sticky_header_desktop');
+  $variables['envivent_sticky_header_mobile'] =
+    theme_get_setting('envivent_sticky_header_mobile');
+
+
+  // $request->headers->remove('X-Frame-Options');
+
+  // Set class on body for page specific styles
+  $variables['path_info']['args'] = FALSE;
+  $path = \Drupal::request()->getPathInfo();
+  $path_args = explode('/', $path);
+
+  if (count($path_args) >= 2) {
+    $variables['path_info']['args'] =
+      Html::cleanCssIdentifier(trim($path, '/'));
+  }
+}
+
+function envivent_preprocess_block(&$variables) {
+  $variables['envivent_fixed_isi']     = theme_get_setting('envivent_fixed_isi');
+  $variables['envivent_scrolling_isi'] = theme_get_setting('envivent_scrolling_isi');
+}

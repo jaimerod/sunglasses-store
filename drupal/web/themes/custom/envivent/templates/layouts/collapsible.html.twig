@@ -1,0 +1,35 @@
+{#
+/**
+ * @file
+ * Template for a generic layout.
+ */
+#}
+{%
+  set classes = [
+    'layout',
+    'layout--' ~ layout.id|clean_class,
+  ]
+%}
+{% if content %}
+  <div{{ attributes.addClass(classes) }}>
+    <div>
+      {% for region in layout.getRegionNames %}
+        {% if content[region] %}
+          <div {{ region_attributes[region].addClass('layout__region', 'layout__region--' ~ region|clean_class) }}>
+            {{ content[region] }}
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+{% endif %}
+
+{# {% if content %}
+  <div {{ attributes.addClass('row') }}>
+  {% if content.modals %}
+    <div {{ region_attributes.modals.addClass('hidden main-region offset-1 col-5') }}>
+      {{ content.modals }}
+    </div>
+  {% endif %}
+  </div>
+{% endif %} #}

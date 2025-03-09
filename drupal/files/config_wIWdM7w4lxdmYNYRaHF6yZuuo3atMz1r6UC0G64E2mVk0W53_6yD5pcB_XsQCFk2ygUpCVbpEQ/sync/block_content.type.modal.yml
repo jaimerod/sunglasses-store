@@ -1,0 +1,8 @@
+uuid: c8809ea3-cd73-4204-ac38-bf6171cc72ec
+langcode: en
+status: true
+dependencies: {  }
+id: modal
+label: Modal
+revision: true
+description: 'A popup that can be activated by setting the href to the trigger field'

@@ -1,0 +1,19 @@
+uuid: d45d6d74-16b0-4b57-9737-39df56c599aa
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.cta
+    - field.storage.block_content.field_css_style_block
+id: block_content.cta.field_css_style_block
+field_name: field_css_style_block
+entity_type: block_content
+bundle: cta
+label: 'CSS Style Block'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

@@ -1,0 +1,8 @@
+uuid: b75e2df5-4b44-4fd8-8610-d50357afd641
+langcode: en
+status: true
+dependencies: {  }
+id: collapsible_item
+label: 'Collapsible Item'
+revision: true
+description: 'Accordion style collapsible item'

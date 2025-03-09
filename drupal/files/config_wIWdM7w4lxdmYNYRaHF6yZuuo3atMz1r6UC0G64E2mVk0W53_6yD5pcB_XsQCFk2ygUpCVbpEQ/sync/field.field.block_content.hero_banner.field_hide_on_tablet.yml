@@ -1,0 +1,23 @@
+uuid: f9b5b221-d177-4e94-b70a-dee40604ba5a
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.hero_banner
+    - field.storage.block_content.field_hide_on_tablet
+id: block_content.hero_banner.field_hide_on_tablet
+field_name: field_hide_on_tablet
+entity_type: block_content
+bundle: hero_banner
+label: 'Hide on Tablet'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Hide
+  off_label: Show
+field_type: boolean

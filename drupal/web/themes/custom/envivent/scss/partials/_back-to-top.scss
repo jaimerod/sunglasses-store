@@ -1,0 +1,43 @@
+$btt-background-color: $green !default;
+$btt-icon: '\f106' !default;
+$btt-icon-color: $white !default;
+$btt-size: 55px !default;
+$btt-border-color: $green !default;
+$btt-border-size: 1px !default;
+
+.back-to-top {
+    bottom: 16px;
+    opacity: 0.5;
+    position: fixed;
+    right: 16px;
+    transition: opacity ease-in-out 0.2s;
+    z-index: 9999;
+
+    &:hover {
+      opacity: 1.0;
+    }
+
+    a {
+        background-color: $btt-background-color;
+        border-radius: $btt-size;
+        border: $btt-border-size solid $btt-border-color;
+        display: block;
+        font-size: 0;
+        height: $btt-size;
+        position: relative;
+        width: $btt-size;
+
+        &:after {
+            color: $btt-icon-color;
+            content: $btt-icon;
+            display: block;
+            font-family: "Font Awesome 5 Free";
+            font-size: 16px;
+            font-weight: 900;
+            left: 50%;
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}

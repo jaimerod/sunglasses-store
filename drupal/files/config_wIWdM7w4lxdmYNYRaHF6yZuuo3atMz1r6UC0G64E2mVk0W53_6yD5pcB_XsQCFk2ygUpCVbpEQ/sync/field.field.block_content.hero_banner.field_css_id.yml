@@ -1,0 +1,19 @@
+uuid: e48c88e3-0d88-4a4f-ab96-dbf5c7c3c88c
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.hero_banner
+    - field.storage.block_content.field_css_id
+id: block_content.hero_banner.field_css_id
+field_name: field_css_id
+entity_type: block_content
+bundle: hero_banner
+label: 'CSS ID'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

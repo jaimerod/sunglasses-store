@@ -1,0 +1,19 @@
+name: Envivent
+type: theme
+description: 'Envivent Base Theme'
+package: Core
+version: VERSION
+core_version_requirement: ^10 || ^11
+libraries:
+  - envivent/global-styling
+#  - envivent/global-scripts
+base theme: false
+regions:
+  violator: 'Violator'
+  top_bar: 'Top Bar'
+  header: 'Header'
+  highlighted: 'Highlighted'
+  content: 'Content'
+  pre_footer: 'Pre Footer'
+  isi: 'Important Safety Information'
+  footer: 'Footer'

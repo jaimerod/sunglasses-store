@@ -1,0 +1,25 @@
+uuid: 9f96c770-78c6-4313-adbd-4e92da2c26ef
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - envivent
+_core:
+  default_config_hash: NDwadleLD3YVSbDUaakxyYZyINYtkFtOVGShfq4kWy8
+id: envivent_branding
+theme: envivent
+region: header
+weight: -5
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: false
+  use_site_slogan: false
+visibility: {  }

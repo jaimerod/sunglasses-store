@@ -1,0 +1,19 @@
+{
+  "authentication":{
+    "blockUnknown":true,
+    "class":"solr.BasicAuthPlugin",
+    "credentials":{
+      "solr":"IV0EHq1OnNrj6gvRCwvFwTrZ1+z1oBbnQdiVC3otuq0= Ndd7LKvVBAaZIF0QAVi1ekCfAJXr1GGfLtRUXhgrF8c=",
+      "drupal":"oZF4/p5yni0sXiQNhU0B6CQQ2SX08qUt53DB2jMCctI= mabRZuiyVBpUJGGGTKTdE6jWF/K1M9rcGUZ6hI3wntY="},
+    "realm":"My Solr users",
+    "forwardCredentials":false,
+    "":{"v":0}},
+  "authorization":{
+    "class":"solr.RuleBasedAuthorizationPlugin",
+    "permissions":[{
+        "name":"all",
+        "role":"admin"}],
+    "user-role":{
+      "solr":["admin"],
+      "drupal":["admin"]},
+    "":{"v":0}}}

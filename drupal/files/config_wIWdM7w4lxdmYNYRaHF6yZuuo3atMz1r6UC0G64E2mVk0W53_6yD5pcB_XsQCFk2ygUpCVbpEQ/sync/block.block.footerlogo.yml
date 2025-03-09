@@ -1,0 +1,25 @@
+uuid: d1217eb0-f4e4-44da-a50a-86568606b63c
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:948f2105-626b-4403-a4f3-3c2e35446e68'
+  module:
+    - block_content
+  theme:
+    - envivent
+id: footerlogo
+theme: envivent
+region: footer
+weight: -7
+provider: null
+plugin: 'block_content:948f2105-626b-4403-a4f3-3c2e35446e68'
+settings:
+  id: 'block_content:948f2105-626b-4403-a4f3-3c2e35446e68'
+  label: 'Footer Logo'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

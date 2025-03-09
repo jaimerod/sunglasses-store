@@ -1,0 +1,21 @@
+uuid: ad3e8454-1d65-46a0-987f-6c553fed4ada
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.cta
+    - field.storage.block_content.field_aos_easing
+  module:
+    - options
+id: block_content.cta.field_aos_easing
+field_name: field_aos_easing
+entity_type: block_content
+bundle: cta
+label: 'AOS Easing'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

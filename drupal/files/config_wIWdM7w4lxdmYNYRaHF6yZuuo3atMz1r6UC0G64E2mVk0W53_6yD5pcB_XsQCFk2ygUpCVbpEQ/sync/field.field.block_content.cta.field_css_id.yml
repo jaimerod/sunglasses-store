@@ -1,0 +1,19 @@
+uuid: 2bbca2f1-05e8-4983-9a05-bfcc7c2d8ecf
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.cta
+    - field.storage.block_content.field_css_id
+id: block_content.cta.field_css_id
+field_name: field_css_id
+entity_type: block_content
+bundle: cta
+label: 'CSS ID'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

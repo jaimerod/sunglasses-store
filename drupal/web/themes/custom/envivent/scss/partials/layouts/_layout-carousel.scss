@@ -1,0 +1,18 @@
+$layout-bottom-spacing-desktop: $section-padding-desktop;
+$layout-bottom-spacing-mobile:  $section-padding-mobile;
+$layout-top-spacing-desktop:    -1 * $section-padding-desktop;
+$layout-top-spacing-mobile:     -1 * $section-padding-mobile;
+
+.layout.layout--carousel-layout {
+  > div {
+    @include make-row();
+
+    .layout__region  {
+      padding: 0 $grid-gutters-xsmall;
+
+      @include breakpoint($desktop) {
+        // empty
+      }
+    }
+  }
+}

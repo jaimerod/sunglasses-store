@@ -1,0 +1,19 @@
+uuid: c7a6a04b-e8b6-4787-b132-1bcd7620d831
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.hero_banner
+    - field.storage.block_content.field_css_classes
+id: block_content.hero_banner.field_css_classes
+field_name: field_css_classes
+entity_type: block_content
+bundle: hero_banner
+label: 'CSS Classes'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

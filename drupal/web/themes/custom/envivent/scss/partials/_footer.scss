@@ -1,0 +1,90 @@
+$footer-top-spacing-mobile:     $section-padding-mobile;
+$footer-top-spacing-desktop:    $section-padding-desktop;
+$footer-bottom-spacing-mobile:  $section-padding-mobile;
+$footer-bottom-spacing-desktop: $section-padding-desktop;
+$footer-min-height-mobile:      0px;
+$footer-min-height-desktop:     0px;
+
+.layout-container > footer {
+  @include stretched-footer($footer-background-color);
+  @include make-container();
+
+  background-color: $footer-background-color;
+  overflow-x: hidden;
+  padding-top: $footer-top-spacing-mobile;
+  padding-bottom: $footer-bottom-spacing-mobile;
+
+  @include breakpoint($desktop) {
+    padding-top: $footer-top-spacing-desktop;
+    padding-bottom: $footer-bottom-spacing-desktop;
+  }
+
+  > div {
+    @include make-row();
+  }
+
+  .footer-logo {
+    @include make-col(12);
+    @include make-md-col(3);
+    @include breakpoint-only($mobile) {
+      text-align: center;
+    }
+
+    img {
+      width: 100% q;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+
+  .footer-copyright {
+    @include make-col(12);
+    @include make-md-col(8);
+    @include make-md-offset(4);
+    @include breakpoint-only($mobile) {
+      text-align: center;
+    }
+  }
+
+  #block-envivent-footer {
+    @include make-col(12);
+    @include make-md-col(7);
+    @include make-md-offset(1);
+    text-align: center;
+
+    .menu {
+      list-style: none;
+      padding: 0;
+      margin-top: 0;
+
+      @include breakpoint($desktop) {
+        display: flex;
+        li {
+          + li {
+            margin-left: 24px;
+          }
+        }
+      }
+
+      li {
+        a {
+          color: $white;
+        }
+      }
+
+    }
+  }
+
+  h2 {
+    color: $footer-text-color;
+    font-size: 13px;
+    line-height: 0;
+    text-transform: uppercase;
+  }
+
+  p {
+    color: $footer-text-color;
+  }
+}

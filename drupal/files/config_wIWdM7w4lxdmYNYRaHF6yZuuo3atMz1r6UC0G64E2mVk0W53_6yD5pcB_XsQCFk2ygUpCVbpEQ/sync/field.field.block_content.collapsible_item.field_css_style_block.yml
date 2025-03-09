@@ -1,0 +1,19 @@
+uuid: 86747529-7781-4815-8450-c585b8cd42bf
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.collapsible_item
+    - field.storage.block_content.field_css_style_block
+id: block_content.collapsible_item.field_css_style_block
+field_name: field_css_style_block
+entity_type: block_content
+bundle: collapsible_item
+label: 'CSS Style Block'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

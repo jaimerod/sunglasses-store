@@ -1,0 +1,21 @@
+uuid: 0cec2629-30f2-43b9-a23e-b155110eb97d
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.important_safety_information_isi
+    - field.storage.block_content.field_fixed_isi
+  module:
+    - text
+id: block_content.important_safety_information_isi.field_fixed_isi
+field_name: field_fixed_isi
+entity_type: block_content
+bundle: important_safety_information_isi
+label: 'Fixed ISI'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

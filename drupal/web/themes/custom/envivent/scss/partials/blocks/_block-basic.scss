@@ -1,0 +1,29 @@
+$block-top-spacing-mobile:     32px;
+$block-top-spacing-desktop:    32px;
+$block-bottom-spacing-mobile:  0px;
+$block-bottom-spacing-desktop: 0px;
+$block-min-height-mobile:      0px;
+$block-min-height-desktop:     0px;
+
+.block--type--basic {
+  min-height: $block-min-height-mobile;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  // margin-top: $block-top-spacing-mobile;
+  // margin-bottom: $block-bottom-spacing-mobile;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  @include breakpoint($desktop) {
+    min-height: $block-min-height-desktop;
+  }
+
+  &.full-width {
+    @include full-width();
+    margin: $block-top-spacing-desktop #{-1 * $grid-gutters-xsmall} $block-bottom-spacing-desktop #{-1 * $grid-gutters-xsmall};
+    padding: $grid-gutters-xsmall;
+  }
+}

@@ -1,0 +1,28 @@
+$cta-top-spacing-mobile:     0px;
+$cta-top-spacing-desktop:    0px;
+$cta-bottom-spacing-mobile:  0px;
+$cta-bottom-spacing-desktop: 0px;
+$cta-min-height-mobile:      0px;
+$cta-min-height-desktop:     0px;
+
+.block.block--type--cta {
+  min-height: $cta-min-height-mobile;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  margin-top: $cta-top-spacing-mobile;
+  margin-bottom: $cta-bottom-spacing-mobile;
+
+  * {
+    text-align: center;
+  }
+
+  a.button {
+    display: table;
+    margin: 0 auto;
+  }
+
+  img {
+    width: 100%;
+  }
+}

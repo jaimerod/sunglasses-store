@@ -1,0 +1,23 @@
+uuid: ff8bbbd7-2284-4720-a511-d1dc62201ca7
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.basic
+    - field.storage.block_content.field_hide_on_mobile
+id: block_content.basic.field_hide_on_mobile
+field_name: field_hide_on_mobile
+entity_type: block_content
+bundle: basic
+label: 'Hide on Mobile'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Hide
+  off_label: Show
+field_type: boolean

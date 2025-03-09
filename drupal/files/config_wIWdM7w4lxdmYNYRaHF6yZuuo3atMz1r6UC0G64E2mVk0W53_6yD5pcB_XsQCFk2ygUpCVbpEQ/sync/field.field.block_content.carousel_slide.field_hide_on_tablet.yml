@@ -1,0 +1,23 @@
+uuid: 4289cde0-091a-43cd-a170-5f781e99f713
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.carousel_slide
+    - field.storage.block_content.field_hide_on_tablet
+id: block_content.carousel_slide.field_hide_on_tablet
+field_name: field_hide_on_tablet
+entity_type: block_content
+bundle: carousel_slide
+label: 'Hide on Tablet'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

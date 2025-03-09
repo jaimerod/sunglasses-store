@@ -1,0 +1,38 @@
+{
+  "name": "drupal-10-template",
+  "description": "",
+  "license": "GPL-2.0",
+  "private": true,
+  "engines": {
+    "node": ">= 14.21"
+  },
+  "scripts": {
+    "start:app": "npm run compose:docker && npm run install:app",
+    "stop:app": "npm run config:export:drush && npm run clear-cache:drush && npm run save:database && docker-compose -f \"./docker/docker-compose.yml\" down",
+    "save:database": "docker exec drupal-db /bin/sh /dump-db.sh",
+    "compose:docker": "docker-compose -f \"./docker/docker-compose.yml\" up -d --build",
+    "install:app": "docker exec drupal-php /bin/sh /setup.sh",
+    "updatedb:drush": "docker exec drupal-php vendor/drush/drush/drush updatedb",
+    "clear-cache:drush": "docker exec drupal-php vendor/drush/drush/drush --root=./web cache:rebuild",
+    "uli:drush": "docker exec drupal-php vendor/drush/drush/drush --root=./web uli",
+    "config:export:drush": "docker exec drupal-php vendor/drush/drush/drush --root=./web config:export -y",
+    "config:import:drush": "docker exec drupal-php vendor/drush/drush/drush --root=./web config:import -y",
+    "libraries:drush": "docker exec drupal-php vendor/drush/drush/drush --root=./web webform:libraries:download",
+    "watch:theme": "docker exec drupal-web /bin/sh /watch-theme.sh"
+  },
+  "devDependencies": {},
+  "browserslist": [
+    "last 2 Chrome major versions",
+    "last 2 Firefox major versions",
+    "last 2 Safari major versions",
+    "last 2 Edge major versions",
+    "last 2 Opera versions",
+    "last 2 iOS major versions",
+    "last 1 Explorer major version",
+    "last 1 ChromeAndroid version",
+    "last 1 UCAndroid version",
+    "last 1 Samsung version",
+    "last 1 OperaMini version",
+    "Firefox ESR"
+  ]
+}

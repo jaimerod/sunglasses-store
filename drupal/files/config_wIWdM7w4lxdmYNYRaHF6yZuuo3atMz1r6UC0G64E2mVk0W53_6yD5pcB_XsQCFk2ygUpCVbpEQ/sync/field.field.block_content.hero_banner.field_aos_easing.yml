@@ -1,0 +1,21 @@
+uuid: cae23d9c-3359-4032-9675-4feb2bfe371c
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.hero_banner
+    - field.storage.block_content.field_aos_easing
+  module:
+    - options
+id: block_content.hero_banner.field_aos_easing
+field_name: field_aos_easing
+entity_type: block_content
+bundle: hero_banner
+label: 'AOS Easing'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

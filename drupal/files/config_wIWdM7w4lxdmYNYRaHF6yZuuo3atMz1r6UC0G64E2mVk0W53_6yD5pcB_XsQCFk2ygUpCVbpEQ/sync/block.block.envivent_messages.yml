@@ -1,0 +1,22 @@
+uuid: b94ed668-907d-4bcb-8cd7-eb437dcc216f
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - envivent
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: envivent_messages
+theme: envivent
+region: highlighted
+weight: -6
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  label_display: '0'
+  provider: system
+visibility: {  }

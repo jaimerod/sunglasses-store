@@ -1,0 +1,25 @@
+uuid: 83895e70-ec30-4cc6-9218-40b69fe0c340
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.cta
+    - field.storage.block_content.field_aos_duration
+id: block_content.cta.field_aos_duration
+field_name: field_aos_duration
+entity_type: block_content
+bundle: cta
+label: 'AOS Duration'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1200
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: millisecond|milliseconds
+field_type: integer

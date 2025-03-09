@@ -1,0 +1,23 @@
+uuid: e1839dc0-578a-4512-9684-2b418ee75e1b
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.modal
+    - field.storage.block_content.field_hide_on_desktop
+id: block_content.modal.field_hide_on_desktop
+field_name: field_hide_on_desktop
+entity_type: block_content
+bundle: modal
+label: 'Hide on Desktop'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

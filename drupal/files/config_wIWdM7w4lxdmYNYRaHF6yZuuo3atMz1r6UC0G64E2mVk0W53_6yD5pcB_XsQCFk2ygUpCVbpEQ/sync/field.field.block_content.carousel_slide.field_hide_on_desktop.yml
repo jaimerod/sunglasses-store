@@ -1,0 +1,23 @@
+uuid: 27e70b42-ce82-4016-9fa5-0222d73b5f74
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.carousel_slide
+    - field.storage.block_content.field_hide_on_desktop
+id: block_content.carousel_slide.field_hide_on_desktop
+field_name: field_hide_on_desktop
+entity_type: block_content
+bundle: carousel_slide
+label: 'Hide on Desktop'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

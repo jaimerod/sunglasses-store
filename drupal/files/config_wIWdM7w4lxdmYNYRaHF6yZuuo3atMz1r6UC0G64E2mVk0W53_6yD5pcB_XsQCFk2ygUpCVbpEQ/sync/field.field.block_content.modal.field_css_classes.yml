@@ -1,0 +1,19 @@
+uuid: 613b31d1-e7ba-4bd2-9ab3-2ab3869b5776
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.modal
+    - field.storage.block_content.field_css_classes
+id: block_content.modal.field_css_classes
+field_name: field_css_classes
+entity_type: block_content
+bundle: modal
+label: 'CSS Classes'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

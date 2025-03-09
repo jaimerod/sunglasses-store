@@ -1,0 +1,295 @@
+  // article[role=article] {
+  //   @include make-container();
+  // }
+
+  #node-page-layout-builder-form,
+  #layout-builder-discard-changes  {
+    @include make-container();
+
+    #edit-actions {
+      @include make-row();
+
+      border: 1px solid $black;
+      //padding: 24px 24px 0 24px;
+      margin-bottom: 16px;
+      //margin-left: 18px;
+
+      #edit-revert,
+      #edit-submit,
+      #edit-discard-changes {
+        @include make-col(4);
+        
+      }
+
+      #edit-preview-toggle {
+        @include make-col(12);
+        order: 4;
+
+      }
+
+      #edit-submit {
+        background-color: $green;
+        color: $white;
+        
+      }
+
+      #edit-discard-changes {
+        background-color: $red;
+        color: $white;
+      }
+
+      label[for=layout-builder-content-preview] {
+        margin: 11px 0 0px;
+      }
+    }
+  }
+
+  .layout-builder-form {
+    @include make-row();
+
+    .js-form-type-vertical-tabs,
+    .layout-builder__message,
+    .form-actions {
+      @include make-col(12);
+    }
+
+
+
+  }
+
+  // In the layout builder only
+  #layout-builder {
+    padding: 0;
+    border: 0;
+    margin-top: 32px;
+
+    .block--type--collapsible-item {
+      .collapsible-content {
+        display: block;
+      }
+
+      .toggle {
+        top: 0;
+      }
+    }
+
+    .layout__region--modals {
+      display: block !important;
+    }
+
+    .block--type--modal {
+      display: block !important;
+    }
+
+    .block--type--hero-banner.full-width {
+      @include full-width();
+    }
+
+    .layout-builder-block {
+      padding: 0px;
+    }
+  }
+
+  .vertical-tabs {
+    display: none;
+  }
+
+  .layout {
+    @include make-container();
+
+    .spacer {
+      background-color: gray;
+      width: 100%;
+      margin-bottom: 60px;
+    }
+
+    .layout__region {
+      padding-top: $section-padding-mobile;
+      padding-bottom: 0;
+
+      @include breakpoint($desktop) {
+        padding-top: $section-padding-desktop;
+        padding-bottom: 0;
+      }
+
+      &.layout__region--modals {
+        display: none;
+      }
+    }
+
+    &.layout--onecol {
+      > div {
+        @include make-row();
+
+        .layout__region {
+          @include make_col(12);
+        }
+      }
+    }
+
+    &.layout--twocol-section {
+      &.layout--twocol-section--50-50 {
+        > div {
+          @include make-row();
+
+          .layout__region {
+            @include make_col(12);
+            @include make-sm-col(6);
+            @include make-md-col(6);
+          }
+        }
+      }
+
+      &.layout--twocol-section--33-67 {
+        > div {
+          @include make-row();
+
+          .layout__region {
+            @include make_col(12);
+            @include make-sm-col(4);
+            @include make-md-col(4);
+          }
+
+          .layout__region:nth-child(2) {
+            @include make_col(12);
+            @include make-sm-col(8);
+            @include make-md-col(8);
+          }
+        }
+      }
+
+      &.layout--twocol-section--67-33 {
+        > div {
+          @include make-row();
+
+          .layout__region {
+            @include make_col(12);
+            @include make-sm-col(8);
+            @include make-md-col(8);
+          }
+
+          .layout__region:nth-child(2) {
+            @include make_col(12);
+            @include make-sm-col(4);
+            @include make-md-col(4);
+          }
+        }
+      }
+
+      &.layout--twocol-section--25-75 {
+        > div {
+          @include make-row();
+
+          .layout__region {
+            @include make_col(12);
+            @include make-sm-col(3);
+            @include make-md-col(3);
+          }
+
+          .layout__region:nth-child(2) {
+            @include make_col(12);
+            @include make-sm-col(9);
+            @include make-md-col(9);
+          }
+        }
+      }
+
+      &.layout--twocol-section--75-25 {
+        > div {
+          @include make-row();
+
+          .layout__region {
+            @include make_col(12);
+            @include make-sm-col(9);
+            @include make-md-col(9);
+          }
+
+          .layout__region:nth-child(2) {
+            @include make_col(12);
+            @include make-sm-col(3);
+            @include make-md-col(3);
+          }
+        }
+      }
+    }
+
+    &.layout--threecol-section {
+      &.layout--threecol-section--25-50-25 {
+         > div {
+          @include make-row();
+
+          .layout__region {
+            @include make_col(12);
+            @include make-sm-col(3);
+            @include make-md-col(3);
+          }
+
+          .layout__region:nth-child(2) {
+            @include make_col(12);
+            @include make-sm-col(6);
+            @include make-md-col(6);
+          }
+        }
+      }
+
+      &.layout--threecol-section--25-25-50 {
+         > div {
+          @include make-row();
+
+          .layout__region {
+            @include make_col(3);
+            @include make-sm-col(3);
+            @include make-md-col(3);
+          }
+
+          .layout__region:nth-child(3) {
+            @include make_col(12);
+            @include make-sm-col(6);
+            @include make-md-col(6);
+          }
+        }
+      }
+
+      &.layout--threecol-section--50-25-25 {
+         > div {
+          @include make-row();
+
+          .layout__region {
+            @include make_col(12);
+            @include make-sm-col(3);
+            @include make-md-col(3);
+          }
+
+          .layout__region:nth-child(1) {
+            @include make_col(12);
+            @include make-sm-col(6);
+            @include make-md-col(6);
+          }
+        }
+      }
+
+      &.layout--threecol-section--33-34-33 {
+         > div {
+          @include make-row();
+
+          .layout__region {
+            @include make_col(12);
+            @include make-sm-col(4);
+            @include make-md-col(4);
+          }
+        }
+      }
+    }
+
+    &.layout--fourcol-section {
+      > div {
+        @include make-row();
+
+        .layout__region {
+          @include make_col(12);
+          @include make-sm-col(3);
+          @include make-md-col(3);
+        }
+      }
+    }
+  }

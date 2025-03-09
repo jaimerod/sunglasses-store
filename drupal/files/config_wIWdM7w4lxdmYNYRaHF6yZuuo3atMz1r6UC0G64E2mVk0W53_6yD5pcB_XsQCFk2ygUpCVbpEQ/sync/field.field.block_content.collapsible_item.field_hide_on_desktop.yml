@@ -1,0 +1,23 @@
+uuid: 0f869e2d-79a5-4a99-827b-72a907e98653
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.collapsible_item
+    - field.storage.block_content.field_hide_on_desktop
+id: block_content.collapsible_item.field_hide_on_desktop
+field_name: field_hide_on_desktop
+entity_type: block_content
+bundle: collapsible_item
+label: 'Hide on Desktop'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

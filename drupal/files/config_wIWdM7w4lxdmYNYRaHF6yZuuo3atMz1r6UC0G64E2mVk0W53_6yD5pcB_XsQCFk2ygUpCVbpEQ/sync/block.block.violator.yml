@@ -1,0 +1,25 @@
+uuid: 15373255-38b5-4115-8174-3d36b40e9c5e
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:5e59fde3-dfe3-414c-a953-4d02ff30bedb'
+  module:
+    - block_content
+  theme:
+    - envivent
+id: violator
+theme: envivent
+region: violator
+weight: -6
+provider: null
+plugin: 'block_content:5e59fde3-dfe3-414c-a953-4d02ff30bedb'
+settings:
+  id: 'block_content:5e59fde3-dfe3-414c-a953-4d02ff30bedb'
+  label: Violator
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

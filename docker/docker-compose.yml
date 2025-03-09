@@ -1,0 +1,226 @@
+services:
+  solr1:
+    build:
+      context: ./solr
+    container_name: solr1
+    ports:
+     - "8981:8983"
+    volumes:
+      - solr1_data:/var/solr
+    environment:
+      - ZK_HOST=zoo1:2181,zoo2:2181,zoo3:2181
+    networks:
+      - solr_cluster
+    depends_on:
+      - zoo1
+      # - zoo2
+      # - zoo3
+
+  # solr2:
+  #   build:
+  #     context: ./solr
+  #   container_name: solr2
+  #   ports:
+  #    - "8982:8983"
+  #   volumes:
+  #     - solr2_data:/var/solr
+  #   environment:
+  #     - ZK_HOST=zoo1:2181,zoo2:2181,zoo3:2181
+  #   networks:
+  #     - solr_cluster
+  #   depends_on:
+  #     - zoo1
+  #     - zoo2
+  #     - zoo3
+
+  # solr3:
+  #   build:
+  #     context: ./solr
+  #   container_name: solr3
+  #   ports:
+  #    - "8983:8983"
+  #   volumes:
+  #     - solr3_data:/var/solr
+  #   environment:
+  #     - ZK_HOST=zoo1:2181,zoo2:2181,zoo3:2181
+  #   networks:
+  #     - solr_cluster
+  #   depends_on:
+  #     - zoo1
+  #     - zoo2
+  #     - zoo3
+
+  zoo1:
+    image: zookeeper:3.6.2
+    container_name: zoo1
+    restart: always
+    hostname: zoo1
+    ports:
+      - 32181:2181
+      - 7001:7000
+    environment:
+      ZOO_MY_ID: 1
+      ZOO_SERVERS: server.1=zoo1:2888:3888;2181 server.2=zoo2:2888:3888;2181 server.3=zoo3:2888:3888;2181
+      ZOO_4LW_COMMANDS_WHITELIST: mntr, conf, ruok
+      ZOO_CFG_EXTRA: "metricsProvider.className=org.apache.zookeeper.metrics.prometheus.PrometheusMetricsProvider metricsProvider.httpPort=7000 metricsProvider.exportJvmInfo=true"
+    networks:
+      - solr_cluster
+
+  # zoo2:
+  #   image: zookeeper:3.6.2
+  #   container_name: zoo2
+  #   restart: always
+  #   hostname: zoo2
+  #   ports:
+  #     - 32182:2181
+  #     - 7002:7000
+  #   environment:
+  #     ZOO_MY_ID: 2
+  #     ZOO_SERVERS: server.1=zoo1:2888:3888;2181 server.2=zoo2:2888:3888;2181 server.3=zoo3:2888:3888;2181
+  #     ZOO_4LW_COMMANDS_WHITELIST: mntr, conf, ruok
+  #     ZOO_CFG_EXTRA: "metricsProvider.className=org.apache.zookeeper.metrics.prometheus.PrometheusMetricsProvider metricsProvider.httpPort=7000 metricsProvider.exportJvmInfo=true"
+  #   networks:
+  #     - solr_cluster
+
+  # zoo3:
+  #   image: zookeeper:3.6.2
+  #   container_name: zoo3
+  #   restart: always
+  #   hostname: zoo3
+  #   ports:
+  #     - 32183:2181
+  #     - 7003:7000
+  #   environment:
+  #     ZOO_MY_ID: 3
+  #     ZOO_SERVERS: server.1=zoo1:2888:3888;2181 server.2=zoo2:2888:3888;2181 server.3=zoo3:2888:3888;2181
+  #     ZOO_4LW_COMMANDS_WHITELIST: mntr, conf, ruok
+  #     ZOO_CFG_EXTRA: "metricsProvider.className=org.apache.zookeeper.metrics.prometheus.PrometheusMetricsProvider metricsProvider.httpPort=7000 metricsProvider.exportJvmInfo=true"
+  #   networks:
+  #     - solr_cluster
+
+  # MySQL Cluster using Bitnami's MariaDB Galera image
+  db1:
+    image: bitnami/mariadb-galera:latest
+    environment:
+      - MARIADB_ROOT_PASSWORD=${DBROOT}
+      - MARIADB_USER=${DBUSER}
+      - MARIADB_PASSWORD=${DBPASS}
+      - MARIADB_DATABASE=${DBNAME}
+      - MARIADB_REPLICATION_MODE=master
+      - MARIADB_GALERA_CLUSTER_ADDRESS=gcomm://db1,db2,db3
+      - MARIADB_GALERA_CLUSTER_BOOTSTRAP=yes
+      - MARIADB_GALERA_MARIABACKUP_PASSWORD=${DBBACKUP}
+      - MARIADB_GALERA_FORCE_SAFETOBOOTSTRAP=yes
+    volumes:
+      - db1_data:/bitnami/mariadb
+      - ./database/init.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./scripts/dump-db.sh:/dump-db.sh
+      - ./logs/mysql:/var/log/mysql
+    networks:
+      - db_cluster
+      - private
+
+  # db2:
+  #   image: bitnami/mariadb-galera:latest
+  #   depends_on:
+  #     - db1
+  #   environment:
+  #     - MARIADB_ROOT_PASSWORD=${DBROOT}
+  #     - MARIADB_USER=${DBUSER}
+  #     - MARIADB_PASSWORD=${DBPASS}
+  #     - MARIADB_DATABASE=${DBNAME}
+  #     - MARIADB_REPLICATION_MODE=slave
+  #     - MARIADB_GALERA_CLUSTER_ADDRESS=gcomm://db1,db2,db3
+  #     - MARIADB_GALERA_MARIABACKUP_PASSWORD=${DBBACKUP}
+  #   volumes:
+  #     - db2_data:/bitnami/mariadb
+  #     - ./database/init.sql:/docker-entrypoint-initdb.d/init.sql
+  #     - ./scripts/dump-db.sh:/dump-db.sh
+  #     - ./logs/mysql:/var/log/mysql
+  #   networks:
+  #     - db_cluster
+
+  # db3:
+  #   image: bitnami/mariadb-galera:latest
+  #   depends_on:
+  #     - db1
+  #   environment:
+  #     - MARIADB_ROOT_PASSWORD=${DBROOT}
+  #     - MARIADB_USER=${DBUSER}
+  #     - MARIADB_PASSWORD=${DBPASS}
+  #     - MARIADB_DATABASE=${DBNAME}
+  #     - MARIADB_REPLICATION_MODE=slave
+  #     - MARIADB_GALERA_CLUSTER_ADDRESS=gcomm://db1,db2,db3
+  #     - MARIADB_GALERA_MARIABACKUP_PASSWORD=${DBBACKUP}
+  #   volumes:
+  #     - db3_data:/bitnami/mariadb
+  #     - ./database/init.sql:/docker-entrypoint-initdb.d/init.sql
+  #     - ./scripts/dump-db.sh:/dump-db.sh
+  #     - ./logs/mysql:/var/log/mysql
+  #   networks:
+  #     - db_cluster
+
+  # Drupal PHP-FPM container; files directory mounted as a shared volume.
+  php-fpm:
+    container_name: drupal-php
+    build:
+      context: ./php-fpm
+    depends_on:
+      - db1
+      # - db2
+      # - db3
+    environment:
+      - APP_ENV=${APP_ENV}
+      - APP_SECRET=${APP_SECRET}
+      # Pointing to one MySQL node; consider using a proxy or DNS round-robin for production.
+      - DATABASE_URL=mysql://${DBUSER}:${DBPASS}@db1:3306/${DBNAME}?serverVersion=5.7
+    volumes:
+      - ../drupal/web:/var/www/web
+      - ../drupal/vendor:/var/www/vendor
+      - ../drupal/composer.json:/var/www/composer.json
+      - ../drupal/composer.lock:/var/www/composer.lock
+      - ../drupal/files:/var/www/web/sites/default/files
+      - .env:/var/www/.env
+      - ./php-fpm/conf.d/php.ini:/usr/local/etc/php/php.ini
+      - ./scripts/setup.sh:/setup.sh
+      - ./logs/php:/var/log
+    networks:
+      # - db_cluster
+      - private
+
+  # NGINX load balancer (or reverse proxy) for Drupal
+  nginx:
+    container_name: drupal-web
+    build:
+      context: ./nginx
+    depends_on:
+      - php-fpm
+    ports:
+      - "${WWW_PORT}:80"
+    volumes:
+      - ../drupal/web:/var/www/web
+      - ../drupal/files:/var/www/web/sites/default/files
+      - ./.env:/var/www/web/.env
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./nginx/sites/:/etc/nginx/sites-available
+      - ./nginx/conf.d/:/etc/nginx/conf.d
+      - ./logs/nginx:/var/log/nginx
+      - ./scripts/watch-theme.sh:/watch-theme.sh
+    networks:
+      # - db_cluster
+      - private
+
+volumes:
+  solr1_data:
+  # solr2_data:
+  # solr3_data:
+  drupal_files:
+  db1_data:
+  # db2_data:
+  # db3_data:
+
+networks:
+  db_cluster:
+  public:
+  private:
+  solr_cluster:

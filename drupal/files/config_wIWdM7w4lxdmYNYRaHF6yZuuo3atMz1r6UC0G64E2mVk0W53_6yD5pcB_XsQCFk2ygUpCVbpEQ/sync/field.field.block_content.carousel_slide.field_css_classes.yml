@@ -1,0 +1,19 @@
+uuid: c055ab7d-604b-4fd2-a062-7a96e50122dd
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.carousel_slide
+    - field.storage.block_content.field_css_classes
+id: block_content.carousel_slide.field_css_classes
+field_name: field_css_classes
+entity_type: block_content
+bundle: carousel_slide
+label: 'CSS Classes'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

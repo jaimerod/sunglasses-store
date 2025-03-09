@@ -1,0 +1,19 @@
+uuid: 51e0714f-3856-4cb9-855b-d164649891db
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.basic
+    - field.storage.block_content.field_css_id
+id: block_content.basic.field_css_id
+field_name: field_css_id
+entity_type: block_content
+bundle: basic
+label: 'CSS ID'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,23 @@
+uuid: 2ee19015-675f-4643-b95f-1b7513cf3fe2
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.important_safety_information_isi
+    - field.storage.block_content.field_scrollable
+id: block_content.important_safety_information_isi.field_scrollable
+field_name: field_scrollable
+entity_type: block_content
+bundle: important_safety_information_isi
+label: Scrollable
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: scrollable
+  off_label: not-scrollable
+field_type: boolean

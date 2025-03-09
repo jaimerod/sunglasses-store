@@ -1,0 +1,42 @@
+/**
+ * This file contains all the color variables for the site
+ */
+
+// Define the colors
+$black:    #353535;
+$blue:     #427BBF;
+$gray:     #6B6D75;
+$green:    #009900;
+$orange:   #FF6C37;
+$red:      #D1532E;
+$white:    #ffffff;
+$yellow:   #f8f829;
+
+// Define how the colors are used
+$body-text-color: $black;
+$body-link-color: $blue;
+$header-background-color: $white;
+$header-text-color: $black;
+$footer-background-color: $gray;
+$footer-text-color: $white;
+$nav-hover-color: $blue;
+$colored-button-menu-text-color: $white;
+$colored-button-menu-first-color: $blue;
+$colored-button-menu-second-color: $orange;
+$nav-text-color: $black;
+$top-menu-border: $gray;
+
+// Changes the text highlighting color
+$selection-background: $blue;
+$selection-foreground: $white;
+
+// Collapsible Item Colors
+$ci-heading-color--closed:   $white;
+$ci-heading-color--hover:    $white;
+$ci-heading-color--opened:   $white;
+$ci-toggle-bg-color--closed: $green;
+$ci-toggle-bg-color--hover:  $gray;
+$ci-toggle-bg-color--opened: $red;
+
+// Violator
+$violator-background-color: rgb(52, 177, 79);

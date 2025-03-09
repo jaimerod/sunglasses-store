@@ -1,0 +1,25 @@
+uuid: 6a5abe3e-daa2-4662-b6e6-0c637da8e6a8
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.basic
+    - field.storage.block_content.field_aos_duration
+id: block_content.basic.field_aos_duration
+field_name: field_aos_duration
+entity_type: block_content
+bundle: basic
+label: 'AOS Duration'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1200
+default_value_callback: ''
+settings:
+  min: 0
+  max: null
+  prefix: ''
+  suffix: ms
+field_type: integer

@@ -1,0 +1,102 @@
+uuid: febbbe5a-2b51-41a8-9d5a-a47799fbce77
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - options
+id: block_content.field_aos_animation
+field_name: field_aos_animation
+entity_type: block_content
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: fade
+      label: Fade
+    -
+      value: fade-up
+      label: 'Fade Up'
+    -
+      value: fade-down
+      label: 'Fade Down'
+    -
+      value: fade-left
+      label: 'Fade Left'
+    -
+      value: fade-right
+      label: 'Fade Right'
+    -
+      value: fade-up-right
+      label: 'Fade Up Right'
+    -
+      value: fade-up-left
+      label: 'Fade Up Left'
+    -
+      value: fade-down-right
+      label: 'Fade Down Right'
+    -
+      value: fade-down-left
+      label: 'Fade Down Left'
+    -
+      value: flip-up
+      label: 'Flip Up'
+    -
+      value: flip-down
+      label: 'Flip Down'
+    -
+      value: flip-left
+      label: 'Flip Left'
+    -
+      value: flip-right
+      label: 'Flip Right'
+    -
+      value: slide-up
+      label: 'Slide Up'
+    -
+      value: slide-down
+      label: 'Slide Down'
+    -
+      value: slide-left
+      label: 'Slide Left'
+    -
+      value: slide-right
+      label: 'Slide Right'
+    -
+      value: zoom-in
+      label: 'Zoom In'
+    -
+      value: zoom-in-up
+      label: 'Zoom In Up'
+    -
+      value: zoom-in-down
+      label: 'Zoom In Down'
+    -
+      value: zoom-in-left
+      label: 'Zoom In Left'
+    -
+      value: zoom-in-right
+      label: 'Zoom In Right'
+    -
+      value: zoom-out
+      label: 'Zoom Out'
+    -
+      value: zoom-out-up
+      label: 'Zoom Out Up'
+    -
+      value: zoom-out-down
+      label: 'Zoom Out Down'
+    -
+      value: zoom-out-left
+      label: 'Zoom Out Left'
+    -
+      value: zoom-out-right
+      label: 'Zoom Out Right'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,8 @@
+uuid: e05f4db6-819d-4b69-8b66-602d47ca7f5b
+langcode: en
+status: true
+dependencies: {  }
+id: important_safety_information_isi
+label: 'Important Safety Information (ISI)'
+revision: true
+description: 'Fixed ISI with scrollable feature'

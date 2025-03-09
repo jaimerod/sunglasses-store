@@ -1,0 +1,42 @@
+$hero-banner-top-spacing-mobile:     $section-padding-mobile * -1;
+$hero-banner-top-spacing-desktop:    $section-padding-desktop * -1;
+$hero-banner-bottom-spacing-mobile:  $section-padding-mobile;
+$hero-banner-bottom-spacing-desktop: $section-padding-desktop;
+$hero-banner-font-color:             $white;
+$hero-banner-min-height-mobile:      229px;
+$hero-banner-min-height-desktop:     450px;
+$hero-banner-bottom-border-size:     7px;
+$hero-banner-bottom-border-color:    $black;
+
+
+.block--type--hero-banner {
+  min-height: $hero-banner-min-height-mobile;
+  border-bottom: $hero-banner-bottom-border-size solid $hero-banner-bottom-border-color;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  margin-top: $hero-banner-top-spacing-mobile;
+  margin-bottom: $hero-banner-bottom-spacing-mobile;
+
+  @include breakpoint($desktop) {
+    min-height: $hero-banner-min-height-desktop;
+    margin-top: $hero-banner-top-spacing-desktop;
+    margin-bottom: $hero-banner-bottom-spacing-desktop;
+  }
+
+  &.full-width {
+    @include full-width();
+    margin: $hero-banner-top-spacing-mobile #{-1 * $grid-gutters-xsmall} $hero-banner-bottom-spacing-mobile #{-1 * $grid-gutters-xsmall};
+    padding: $grid-gutters-xsmall;
+
+    @include breakpoint($desktop) {
+      @include full-width();
+      margin: $hero-banner-top-spacing-desktop #{-1 * $grid-gutters-xsmall} $hero-banner-bottom-spacing-desktop #{-1 * $grid-gutters-xsmall};
+    }
+  }
+
+  h1, h2, p, li {
+    color: $hero-banner-font-color;
+    text-shadow: 0 0 10px #000;
+  }
+}

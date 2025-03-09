@@ -1,0 +1,20 @@
+uuid: 551d6fc6-6ab1-4414-819a-762dc22efbce
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+id: block_content.field_aos_duration
+field_name: field_aos_duration
+entity_type: block_content
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

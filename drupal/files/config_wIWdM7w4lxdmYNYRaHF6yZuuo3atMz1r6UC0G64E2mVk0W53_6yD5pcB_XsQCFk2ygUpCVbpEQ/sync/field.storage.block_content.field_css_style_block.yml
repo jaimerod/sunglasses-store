@@ -1,0 +1,19 @@
+uuid: 50cb543a-fedb-4008-b38d-4af427b6b297
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+id: block_content.field_css_style_block
+field_name: field_css_style_block
+entity_type: block_content
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

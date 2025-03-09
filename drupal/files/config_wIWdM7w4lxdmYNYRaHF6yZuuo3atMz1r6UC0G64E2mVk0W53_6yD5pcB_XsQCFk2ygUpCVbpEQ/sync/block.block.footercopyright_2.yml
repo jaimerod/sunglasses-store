@@ -1,0 +1,25 @@
+uuid: 76c0d7bb-1246-47b3-b70a-37202357f993
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:89aabecc-9f28-4bdd-844b-6a92728532cf'
+  module:
+    - block_content
+  theme:
+    - envivent
+id: footercopyright_2
+theme: envivent
+region: footer
+weight: -5
+provider: null
+plugin: 'block_content:89aabecc-9f28-4bdd-844b-6a92728532cf'
+settings:
+  id: 'block_content:89aabecc-9f28-4bdd-844b-6a92728532cf'
+  label: 'Footer Copyright'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

@@ -1,0 +1,78 @@
+uuid: 639f2eb5-cc36-44f7-8f37-6d438f399cfd
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - options
+id: block_content.field_aos_easing
+field_name: field_aos_easing
+entity_type: block_content
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: linear
+      label: Linear
+    -
+      value: ease
+      label: Ease
+    -
+      value: ease-in
+      label: 'Ease In'
+    -
+      value: ease-out
+      label: 'Ease Out'
+    -
+      value: ease-in-out-back
+      label: 'Ease In Out'
+    -
+      value: ease-in-back
+      label: 'Ease In Back'
+    -
+      value: ease-out-back
+      label: 'Ease Out Back'
+    -
+      value: ease-in-sine
+      label: 'Ease In Sine'
+    -
+      value: ease-out-sine
+      label: 'Ease Out Sine'
+    -
+      value: ease-in-out-sine
+      label: 'Ease In Out Sine'
+    -
+      value: ease-in-quad
+      label: 'Ease In Quad'
+    -
+      value: ease-out-quad
+      label: 'Ease Out Quad'
+    -
+      value: ease-in-out-quad
+      label: 'Ease In Out Quad'
+    -
+      value: ease-in-cubic
+      label: 'Ease In Cubic'
+    -
+      value: ease-out-cubic
+      label: 'Ease Out Cubic'
+    -
+      value: ease-in-out-cubic
+      label: 'Ease In Out Cubic'
+    -
+      value: ease-in-quart
+      label: 'Ease In Quart'
+    -
+      value: ease-out-quart
+      label: 'Ease Out Quart'
+    -
+      value: ease-in-out-quart
+      label: 'Ease In Out Quart'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

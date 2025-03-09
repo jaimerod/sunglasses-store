@@ -1,0 +1,21 @@
+uuid: ef7d94f9-c0f3-4013-91ae-c31aeaec2a5f
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.cta
+    - field.storage.block_content.field_aos_anchor
+  module:
+    - options
+id: block_content.cta.field_aos_anchor
+field_name: field_aos_anchor
+entity_type: block_content
+bundle: cta
+label: 'AOS Anchor'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

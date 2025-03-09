@@ -1,0 +1,21 @@
+uuid: 35bdb50b-b0a4-493c-b7ea-b436b513bef3
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.hero_banner
+    - field.storage.block_content.field_aos_anchor
+  module:
+    - options
+id: block_content.hero_banner.field_aos_anchor
+field_name: field_aos_anchor
+entity_type: block_content
+bundle: hero_banner
+label: 'AOS Anchor'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

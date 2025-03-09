@@ -1,0 +1,27 @@
+uuid: 708a9911-9ea8-4fe3-aacd-c7255f10742c
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.taxonomy_term.token
+    - taxonomy.vocabulary.collapsible_item_groups
+  module:
+    - layout_builder
+    - text
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: taxonomy_term.collapsible_item_groups.token
+targetEntityType: taxonomy_term
+bundle: collapsible_item_groups
+mode: token
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

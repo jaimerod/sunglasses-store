@@ -1,0 +1,9 @@
+uuid: 079560e5-4621-44be-9aff-a8dc17ee962b
+langcode: en
+status: true
+dependencies: {  }
+name: 'Collapsible Item Groups'
+vid: collapsible_item_groups
+description: null
+weight: 0
+new_revision: false

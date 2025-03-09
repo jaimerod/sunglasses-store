@@ -1,0 +1,43 @@
+modal_layout:
+  label: 'Modal'
+  description: 'Add modals to this section to initially hide them.'
+  category: 'Envivent'
+  template: templates/layouts/modal
+  default_region: modals
+  regions:
+    modals:
+      label: Modals
+  icon_map:
+    - [ space1, space1, space1, space1, space1]
+    - [ space2, modals, modals, modals, space3]
+    - [ space4, space4, space4, space4, space4]
+
+carousel_layout:
+  label: 'Carousel'
+  description: 'Add slides to create a slideshow'
+  category: 'Envivent'
+  template: templates/layouts/carousel
+  default_region: carousel
+  regions:
+    slides:
+      label: Slides
+  icon_map:
+    - [ item 1,  item 2, item 2, item 2, item 2, item 3 ]
+
+collapsible_layout:
+  label: 'Collapsible'
+  description: 'Add collapsible items to create an accordion'
+  category: 'Envivent'
+  template: templates/layouts/collapsible
+  default_region: items
+  regions:
+    items:
+      label: Items
+  icon_map:
+    - [ items 1 ]
+    - [ items 2 ]
+    - [ items 3 ]
+    - [ items 4 ]
+    - [ items 5 ]
+
+

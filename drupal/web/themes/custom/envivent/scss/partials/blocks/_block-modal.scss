@@ -1,0 +1,38 @@
+$modal-background-color:       $white;
+$modal-border-color:           $gray;
+$modal-border-width:           16px;
+$modal-bottom-spacing-desktop: $section-padding-desktop;
+$modal-bottom-spacing-mobile:  $section-padding-mobile;
+$modal-read-more-color:        $blue;
+$modal-read-more-icon:         "\f063";
+$modal-read-more-size:         16px;
+$modal-top-spacing-desktop:    0;
+$modal-top-spacing-mobile:     0;
+
+.mfp-container {
+  max-height: 100vh;
+}
+
+.mfp-content {
+  @include make-container();
+  background-color: $modal-background-color;
+  border: $modal-border-width solid $modal-border-color;
+}
+
+.block--type--modal {
+  @include make-container();
+
+  padding-bottom: $modal-bottom-spacing-mobile;
+  padding-top: $modal-top-spacing-mobile;
+  position: relative;
+  z-index: 11;
+
+  @include breakpoint($desktop) {
+    padding-bottom: $modal-bottom-spacing-desktop;
+    padding-top: $modal-top-spacing-desktop;
+  }
+
+  .layout__region {
+    padding-top: 0;
+  }
+}

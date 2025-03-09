@@ -1,0 +1,23 @@
+uuid: 8102e333-fa45-4948-ad3b-db5449d6c612
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.hero_banner
+    - field.storage.block_content.field_hide_on_mobile
+id: block_content.hero_banner.field_hide_on_mobile
+field_name: field_hide_on_mobile
+entity_type: block_content
+bundle: hero_banner
+label: 'Hide on Mobile'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Hide
+  off_label: Show
+field_type: boolean

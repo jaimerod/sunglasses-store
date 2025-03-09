@@ -1,0 +1,21 @@
+uuid: 5fa0a7d2-c309-4509-b67e-2a083ffda374
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.basic
+    - field.storage.block_content.field_aos_animation
+  module:
+    - options
+id: block_content.basic.field_aos_animation
+field_name: field_aos_animation
+entity_type: block_content
+bundle: basic
+label: 'AOS Animation'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

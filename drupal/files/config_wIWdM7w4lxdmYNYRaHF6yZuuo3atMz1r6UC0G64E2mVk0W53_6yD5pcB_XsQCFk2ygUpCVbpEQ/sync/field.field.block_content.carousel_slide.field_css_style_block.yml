@@ -1,0 +1,19 @@
+uuid: 7c0afa48-d947-40e2-8781-6f5123198c54
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.carousel_slide
+    - field.storage.block_content.field_css_style_block
+id: block_content.carousel_slide.field_css_style_block
+field_name: field_css_style_block
+entity_type: block_content
+bundle: carousel_slide
+label: 'CSS Style Block'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

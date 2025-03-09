@@ -1,0 +1,77 @@
+name: Deploy Website,
+run-name: ${{ github.actor }} is deploying the website.
+on: [push]
+jobs:
+  push-to-staging:
+    name: Deploy to staging
+    if: github.ref == 'refs/heads/develop'
+    runs-on: irvine
+    steps:
+      - name: display info
+        run: |
+          echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+          echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
+          echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
+
+      - name: git checkout
+        shell: bash -l {0}
+        run: |
+          export HOME=/root
+
+          cd ${{ vars.STAG_BASEDIR}}
+          
+          if [ ! -d ${{ vars.STAG_BASEDIR}}/.git ]; then
+            echo "Git cloning..."
+            git clone git@github.com:${{ github.repository }}.git ${{ vars.STAG_BASEDIR }}
+          else
+            echo "Git already cloned."
+          fi
+              
+          git config --global --add safe.directory ${{ vars.STAG_BASEDIR}}
+          git checkout develop
+          git reset --hard
+          git clean -fxd
+          git pull
+
+      - name: restore database 
+        shell: bash -l {0}
+        run: |
+          export HOME=/root
+          mysql -u${{ vars.STAG_DBUSER}} -p${{ vars.STAG_DBPASS}} ${{ vars.STAG_DBNAME}} --host=${{ vars.STAG_DBHOST}} < ${{ vars.STAG_BASEDIR}}/../docker/database/init.sql
+
+      - name: create .env file 
+        shell: bash -l {0}
+        run: |
+          export HOME=/root
+
+          if [ -e ${{ vars.STAG_BASEDIR}}/.env ]; then
+              echo "Environment file exists.. deleting."
+              rm ${{ vars.STAG_BASEDIR}}/.env
+          fi
+
+          echo "Creating environment file"
+          touch ${{ vars.STAG_BASEDIR }}/.env
+          echo BASEURL="${{ vars.STAG_BASEURL }}" >> ${{ vars.STAG_BASEDIR}}/.env
+          echo DBNAME="${{ vars.STAG_DBNAME}}" >> ${{ vars.STAG_BASEDIR}}/.env
+          echo DBHOST="${{ vars.STAG_DBHOST}}" >> ${{ vars.STAG_BASEDIR}}/.env
+          echo DBUSER="${{ vars.STAG_DBUSER}}" >> ${{ vars.STAG_BASEDIR}}/.env
+          echo DBPASS="${{ vars.STAG_DBPASS}}" >> ${{ vars.STAG_BASEDIR}}/.env   
+
+      - name: build site 
+        shell: bash -l {0}
+        run: |
+          export HOME=/root
+
+          cd ${{ vars.STAG_BASEDIR}}
+          export COMPOSER_ALLOW_SUPERUSER=1
+          composer install -n
+
+          ln -s ${{ vars.STAG_BASEDIR}}/files ${{ vars.STAG_BASEDIR}}/web/sites/default/files
+      
+          cd ${{ vars.STAG_BASEDIR}}/web/themes/custom/envivent
+          export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+          [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+          nvm install
+          nvm use
+          npm install
+          ./node_modules/.bin/gulp build

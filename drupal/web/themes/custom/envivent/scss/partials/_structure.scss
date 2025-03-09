@@ -1,0 +1,129 @@
+/**
+ * This file contains the structure of the site. These styles build the basic
+ * wire-frame of the site. Specific components such as slide-shows, accordions,
+ * etc. should have their own partial.
+ */
+
+html {
+  overflow-x: hidden;
+  overflow-y: scroll;
+
+  .toolbar-horizontal {
+    &.sticky-header {
+      @include breakpoint($desktop) {
+        padding-top: 180px !important;
+      }
+
+      header[role=banner] {
+        margin-top: 39px;
+      }
+
+      &.toolbar-tray-open {
+        @include breakpoint($desktop) {
+          padding-top: 218px !important;
+        }
+
+        header[role=banner] {
+          margin-top: 79px;
+        }
+      }
+    }
+  }
+
+  .toolbar-vertical {
+    &.sticky-header {
+      @include breakpoint($desktop) {
+        padding-top: 185px !important;
+      }
+
+      &.toolbar-tray-open {
+        @include breakpoint($desktop) {
+          padding-top: 218px !important;
+        }
+      }
+
+      header[role=banner] {
+        margin-top: 39px;
+      }
+    }
+
+  }
+
+  &.enable_sticky_mobile {
+    .sticky-header {
+      @include breakpoint-only($mobile) {
+        padding-top: 63px;
+
+        .layout-container > header {
+          position: fixed;
+          top: 0;
+          left: 0;
+        }
+      }
+
+      @include breakpoint-only($tablet) {
+        padding-top: 63px;
+
+        .layout-container > header {
+          position: fixed;
+          top: 0;
+          left: 0;
+        }
+      }
+    }
+  }
+
+  &.enable_sticky_desktop {
+    .sticky-header {
+      @include breakpoint($desktop) {
+        padding-top: 145px;
+
+        .layout-container > header {
+          position: fixed;
+          top: 0;
+          left: 0;
+        }
+      }
+    }
+  }
+}
+
+body {
+  position: relative;
+  min-width: 375px;
+}
+
+a {
+  color: $body-link-color;
+}
+
+.layout-container {
+  // margin: 0 auto;
+  // max-width: $desktop-max-width;
+
+  // @include breakpoint-only($mobile) {
+  //   overflow: hidden;
+  // }
+
+  // @include breakpoint-only($tablet) {
+  //   overflow: hidden;
+  // }
+
+  > main {
+    display: block;
+
+    img {
+      height: auto;
+      max-width: 100%;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+  }
+
+  > .prefooter {
+    @include make-row();
+    margin: 0;
+  }
+}

@@ -1,0 +1,101 @@
+.layout-container > header {
+  background-color: $header-background-color;
+
+  position: relative;
+  width: 100vw;
+  z-index: 500;
+
+  @include breakpoint($desktop) {
+    height: 144px;
+  }
+
+  // @media (min-width: $desktop-max-width) {
+  //   left: calc(((100vw - #{$desktop-max-width}) / 2 *  -1));
+  // }
+
+  .menu-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-height: 63px;
+    overflow: hidden;
+
+    @include breakpoint($desktop) {
+      max-height: none;
+      overflow: visible;
+    }
+  }
+
+  .top-bar-region {
+    order: 2;
+    width: 100%;
+
+    @include breakpoint($desktop) {
+      background-color: $green;
+
+      > div {
+        @include make-container();
+      }
+
+      a {
+        color: $white;
+      }
+    }
+  }
+
+  .main-header-region {
+    @include make-container();
+    order: 1;
+
+    @include breakpoint($desktop) {
+      order: 2;
+    }
+
+    > div {
+      @include make-row();
+    }
+  }
+
+  #block-envivent-branding {
+    @include make-col(12);
+    @include make-md-col(3);
+    margin-top: 12px;
+
+    @include breakpoint($desktop) {
+      margin-top: 22px;
+    }
+
+    img {
+      height: 44px;
+
+      @include breakpoint($desktop) {
+        height: 64px;
+      }
+    }
+  }
+
+  #block-envivent-site-branding {
+    a + a {
+      display: none;
+    }
+
+    img {
+      max-width: 200px;
+    }
+  }
+
+  #block-envivent-main-menu {
+    @include make-col(12);
+    @include make-md-col(9);
+    position: relative;
+  }
+
+  h1 {
+    color: $header-text-color;
+    font-size: $desktop-base-font-size * 4;
+    margin: 0 0 $desktop-padding;
+
+    span {
+      color: $header-text-color;
+    }
+  }
+}

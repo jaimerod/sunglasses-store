@@ -1,0 +1,314 @@
+/**
+ * This page contains the default navigation menu styling
+ */
+.layout-container {
+  nav[aria-labelledby=system-breadcrumb] {
+    @include make-row();
+
+    ol {
+      @include make-row();
+
+      display: flex;
+      list-style: none;
+      padding: 0;
+
+      li + li {
+        margin-left: 16px;
+
+        &:before {
+          content: ">";
+          position: relative;
+          left: -6px;
+          top: 2px;
+        }
+      }
+    }
+  }
+
+  .hamburger {
+    $size: 40px;
+    $spacing: 6px;
+    $thickness: 4px;
+    $border-radius: 10px;
+    $active-size: 40px;
+    $active-thickness: 4px;
+    display: block;
+    height: $size;
+    position: absolute;
+    right: $mobile-padding;
+    top: 13px;
+    width: $size;
+
+    @include breakpoint($tablet) {
+      right: $tablet-padding;
+    }
+
+    @include breakpoint($desktop) {
+      display: none;
+    }
+
+    &.active {
+      > div {
+        visibility: hidden;
+        width: $active-size;
+        height: $active-thickness;
+
+        &:before, &:after {
+          visibility: visible;
+          transform-origin: center center;
+          transform: translateY(0);
+        }
+
+        &:before {
+          transform: rotate(-45deg);
+          animation: burger1 250ms linear;
+          width: $active-size;
+          height: $active-thickness;
+        }
+
+        @keyframes burger1 {
+          0%   { transform: translateY(0); }
+          50%  { transform: translateY(0); }
+          100% { transform: translateY(0) rotate(-45deg); }
+        }
+
+        &:after {
+          transform: rotate(45deg);
+          animation: burger2 250ms linear;
+          width: $active-size;
+          height: $active-thickness;
+        }
+
+        @keyframes burger2 {
+          0%   { transform: translateY(0); }
+          50%  { transform: translateY(0); }
+          100% { transform: translateY(0) rotate(45deg); }
+        }
+      }
+    }
+
+    > div {
+      background-color: $gray;
+      height: $thickness;
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%,-50%);
+      width: $size;
+      border-radius: $border-radius;
+
+      &:before, &:after {
+        background-color: $gray;
+        content: '';
+        height: $thickness;
+        position: absolute;
+        width: $size;
+        border-radius: $border-radius;
+      }
+
+      &:before {
+        animation: burger3 250ms linear;
+        transform: translateY(($thickness + $spacing) * -1);
+      }
+
+      @keyframes burger3 {
+        0%   { transform: translateY(0); }
+        50%  { transform: translateY(0); }
+        100% { transform: translateY(#{$spacing * -1}) rotate(0deg); }
+      }
+
+      &:after {
+        animation: burger4 250ms linear;
+        transform: translateY($thickness + $spacing);
+        width: $size - 10;
+      }
+
+      @keyframes burger4 {
+        0%   { transform: translateY(0); }
+        50%  { transform: translateY(0); }
+        100% { transform: translateY($spacing) rotate(0deg); }
+      }
+    }
+
+  }
+
+  > header {
+    &:after {
+      content: '';
+      width: 100%;
+      height: 1px;
+      position: absolute;
+      top: 63px;
+      background: $top-menu-border;
+
+    }
+
+    @include breakpoint($desktop) {
+      box-shadow: 0 2px 4px rgba(176,176,176,0.5);
+      &:after {
+        content: none;
+      }
+    }
+
+    .top-bar-region {
+      @include breakpoint($desktop) {
+        border-bottom: 1px solid $top-menu-border;
+      }
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .menu-container {
+      &.active {
+        max-height: 100vh;
+      }
+    }
+  }
+
+  #block-envivent-main-menu {
+    padding-top: 7px;
+
+    @include breakpoint($desktop) {
+      margin-top: 38px;
+
+      > ul {
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
+
+    > ul {
+      padding-left: 0;
+      margin: 0;
+
+      @include breakpoint($desktop) {
+        li {
+ //         &.has-children {
+
+            &:hover {
+              .menu {
+                display: flex;
+                flex-direction: column;
+              }
+            }
+
+            .menu {
+              display: none;
+              position: absolute;
+              background-color: $green;
+              padding: 0;
+              margin-left: -20px;
+
+              li {
+                margin: 0;
+
+                a {
+                  padding: 20px;
+
+                  &.is-active {
+                    color: $black;
+                  }
+                }
+
+                + li {
+                  margin: 0;
+                }
+              }
+            }
+//          }
+
+          + li {
+            margin-left: 50px;
+          }
+
+          a {
+            padding: 0;
+          }
+        }
+      }
+
+      li {
+        a {
+          display: block;
+          text-decoration: none;
+          font-weight: 500;
+          color: $nav-text-color;
+          padding: 20px 0px;
+
+          &.is-active {
+            color: $green;
+            font-weight: 600;
+
+            @include breakpoint($desktop) {
+              &:after {
+                content: '';
+                width: 100%;
+                height: 2px;
+                background-color: $green;
+                display: block;
+                margin-top: 2px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #block-topmenu {
+    > ul {
+      margin: 0;
+      padding-left: 0;
+
+      li {
+        a {
+          text-decoration: none;
+          padding: 16px 0;
+          display: block;
+          text-align: center;
+          font-weight: 600;
+        }
+      }
+
+      @include breakpoint($desktop) {
+        display: flex;
+        justify-content: flex-end;
+
+        li {
+          padding: 0 22px;
+
+          &:first-child {
+            padding-left: 0;
+          }
+
+          &:last-child {
+            padding-right: 0;
+          }
+
+          + li {
+            position: relative;
+
+            &:before {
+              content: '';
+              width: 1px;
+              height: 17px;
+              background: $top-menu-border;
+              display: block;
+              position: absolute;
+              left: 0;
+              top: 50%;
+              transform: translateY(-50%);
+            }
+          }
+
+          a {
+            padding: 4px 0;
+            font-weight: 400;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+uuid: 3e647ebe-fbb6-46e0-b92b-9ade021db734
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:modal:a573537f-1c9f-486c-b6f6-095cbd73ee06'
+  module:
+    - block_content
+  theme:
+    - envivent
+id: popleave
+theme: envivent
+region: footer
+weight: -4
+provider: null
+plugin: 'block_content:a573537f-1c9f-486c-b6f6-095cbd73ee06'
+settings:
+  id: 'block_content:a573537f-1c9f-486c-b6f6-095cbd73ee06'
+  label: Popleave
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

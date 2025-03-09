@@ -1,0 +1,15 @@
+$layout-bottom-spacing-desktop: 0;
+$layout-bottom-spacing-mobile:  0;
+$layout-top-spacing-desktop:    -1 * $section-padding-desktop;
+$layout-top-spacing-mobile:     -1 * $section-padding-mobile;
+
+.layout.layout--collapsible-layout {
+  > div {
+    @include make-row();
+
+    .layout__region  {
+      @include make-col(12);
+      margin: $layout-top-spacing-mobile 0 $layout-bottom-spacing-mobile 0;
+    }
+  }
+}

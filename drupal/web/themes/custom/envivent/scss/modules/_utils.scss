@@ -1,0 +1,105 @@
+/**
+ * This is where you put in your helper mixins and classes.
+ */
+
+
+/* Responsive Helpers */
+
+@mixin clearfix() {
+    &::after {
+        display: block;
+        content: "";
+        clear: both;
+    }
+}
+
+@mixin background-image($image) {
+    $width: image-width($image);
+    $height: image-height($image);
+    background-image: image-url($image);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: $width $height;
+    display: block;
+    height: $height;
+    text-indent: -9999px;
+    width: $width;
+}
+
+@mixin background-inline($image) {
+    @include background-image($image);
+    background-image: inline-image($image);
+}
+
+@mixin retina-background($image) {
+    $width: image-width($image);
+    $height: image-height($image);
+    background-image: image-url($image);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: ($width / 2) ($height / 2);
+    display: block;
+    height: $height / 2;
+    width: $width / 2;
+}
+
+@mixin retina-inline($image) {
+    @include retina-background($image);
+    background-image: inline-image($image);
+}
+
+@mixin background-sprite($image, $columns, $rows) {
+    $height: image-height($image) / $rows;
+    $width: image-width($image) / $columns;
+    background-image: image-url($image);
+    background-repeat: no-repeat;
+    display: block;
+    text-indent: -9999px;
+    width: $width;
+    height: $height;
+}
+
+@mixin retina-background-sprite($image, $columns, $rows) {
+    $height: image-height($image) / $rows;
+    $width: image-width($image) / $columns;
+    $bg-size-width: image-width($image) / 2;
+    $bg-size-height: image-height($image) / 2;
+    background-image: image-url($image);
+    background-repeat: no-repeat;
+    display: block;
+    text-indent: -9999px;
+    width: $width / 2;
+    height: $height / 2;
+    background-size: $bg-size-width $bg-size-height;
+}
+
+@mixin full-width {
+    @media (min-width: $desktop-max-width) {
+        margin-left:   calc(((100vw + 36px - #{$desktop-max-width}) / 2 * -1));
+        margin-right:  calc(((100vw + 36px - #{$desktop-max-width}) / 2 * -1));
+        padding-left:  calc(((100vw - #{$desktop-max-width}) / 2 * 1) + #{$desktop-padding * 1});
+        padding-right: calc(((100vw - #{$desktop-max-width}) / 2 * 1) + #{$desktop-padding * 1});
+        padding-left:  calc(((100vw - #{$desktop-max-width}) / 2 * 1));
+        padding-right: calc(((100vw - #{$desktop-max-width}) / 2 * 1));
+    }
+}
+
+@mixin colored-bullets($color) {
+    list-style: none;
+    li {
+        position: relative;
+        &:before {
+            color: $color;
+            content: '\2022';
+            display: block;
+            left: -10px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+}
+
+@mixin stretched-footer($color) {
+    box-shadow: 0 50vh 0 50vh $color;
+}

@@ -1,0 +1,84 @@
+$ci-toggle-height:           64px    !default;
+$ci-toggle-bg-color--closed: $green  !default;
+$ci-toggle-bg-color--opened: $red    !default;
+$ci-toggle-bg-color--hover:  $gray   !default;
+$ci-icon--closed:            '\f0fe' !default;
+$ci-icon--opened:            '\f146' !default;
+$ci-icon--alignment:         'left'  !default;
+$ci-heading-color--closed:   $white  !default;
+$ci-heading-color--opened:   $white  !default;
+$ci-heading-color--hover:    $white  !default;
+$ci-spacing:                 16px    !default;
+$ci-padding:                 16px    !default;
+
+.block--type--collapsible-item {
+  position: relative;
+  margin-bottom: $ci-spacing;
+
+  &.js-layout-builder-block {
+    // make adjustments due to layout builder styling
+    .toggle {
+      top: calc(#{($ci-toggle-height - $ci-toggle-height) / 2} + 12px);
+      right: 16px;
+    }
+  }
+
+  &.opened {
+
+    .toggle {
+      &:before {
+        content: $ci-icon--opened;
+      }
+    }
+
+    .collapsible-button {
+      background-color: $ci-toggle-bg-color--opened;
+    }
+
+    .collapsible-content {
+
+    }
+  }
+
+  .toggle {
+    position: absolute;
+    top: #{($ci-toggle-height - $ci-toggle-height) / 2};
+    right: 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+    min-width: 44px;
+    height: $ci-toggle-height;
+    color: $white;
+
+    &:before {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      content: $ci-icon--closed;
+      display: block;
+      text-decoration: underline;
+    }
+  }
+
+  .collapsible-button {
+    background-color: $ci-toggle-bg-color--closed;
+    color: $white;
+    cursor: pointer;
+    margin: 0;
+    padding: $ci-padding;
+
+    &:hover {
+      background-color: $ci-toggle-bg-color--hover;
+    }
+  }
+
+  .collapsible-content {
+    padding: 0;
+    overflow: hidden;
+    display: none;
+  }
+}

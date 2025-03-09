@@ -1,0 +1,19 @@
+uuid: 98c83feb-73cb-4e04-a320-2e487e2dc850
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.modal
+    - field.storage.block_content.field_css_style_block
+id: block_content.modal.field_css_style_block
+field_name: field_css_style_block
+entity_type: block_content
+bundle: modal
+label: 'CSS Style Block'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

@@ -1,0 +1,21 @@
+uuid: 66f6e76f-1c55-49f3-aed6-a2ca537c01e2
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.important_safety_information_isi
+    - field.storage.block_content.layout_builder__layout
+  module:
+    - layout_builder
+id: block_content.important_safety_information_isi.layout_builder__layout
+field_name: layout_builder__layout
+entity_type: block_content
+bundle: important_safety_information_isi
+label: Layout
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: layout_section

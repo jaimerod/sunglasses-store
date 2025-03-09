@@ -1,0 +1,22 @@
+uuid: e409d05a-209c-4cc4-8a78-9e2260bca9ce
+langcode: en
+status: true
+dependencies:
+  theme:
+    - envivent
+_core:
+  default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
+id: envivent_local_tasks
+theme: envivent
+region: content
+weight: -5
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility: {  }

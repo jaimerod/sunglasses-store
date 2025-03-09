@@ -1,0 +1,8 @@
+uuid: c4aa4cec-dc55-417f-a3a1-8139a8f2fc81
+langcode: en
+status: true
+dependencies: {  }
+id: hero_banner
+label: 'Hero Banner'
+revision: true
+description: 'Hero banner with background and body copy. Can be full width or content width.'
