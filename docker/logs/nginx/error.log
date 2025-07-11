@@ -1,0 +1,8 @@
+2025/07/11 00:50:55 [error] 32#32: *1 directory index of "/var/www/web/" is forbidden, client: 172.18.0.1, server: localhost, request: "GET / HTTP/1.1", host: "localhost"
+2025/07/11 00:51:06 [error] 32#32: *1 directory index of "/var/www/web/" is forbidden, client: 172.18.0.1, server: localhost, request: "GET / HTTP/1.1", host: "localhost"
+2025/07/11 00:51:07 [error] 32#32: *1 directory index of "/var/www/web/" is forbidden, client: 172.18.0.1, server: localhost, request: "GET / HTTP/1.1", host: "localhost"
+2025/07/11 00:51:07 [error] 32#32: *1 directory index of "/var/www/web/" is forbidden, client: 172.18.0.1, server: localhost, request: "GET / HTTP/1.1", host: "localhost"
+2025/07/11 00:51:08 [error] 32#32: *1 directory index of "/var/www/web/" is forbidden, client: 172.18.0.1, server: localhost, request: "GET / HTTP/1.1", host: "localhost"
+2025/07/11 00:51:08 [error] 32#32: *1 directory index of "/var/www/web/" is forbidden, client: 172.18.0.1, server: localhost, request: "GET / HTTP/1.1", host: "localhost"
+2025/07/11 00:51:08 [error] 32#32: *1 directory index of "/var/www/web/" is forbidden, client: 172.18.0.1, server: localhost, request: "GET / HTTP/1.1", host: "localhost"
+2025/07/11 00:51:08 [error] 32#32: *1 directory index of "/var/www/web/" is forbidden, client: 172.18.0.1, server: localhost, request: "GET / HTTP/1.1", host: "localhost"

@@ -1,0 +1,148 @@
+2025-07-11 02:44:28.496 INFO  (main) [c: s: r: x: t:] o.e.j.s.Server jetty-10.0.22; built: 2024-06-27T16:03:51.502Z; git: 5c8471e852d377fd726ad9b1692c35ffc5febb09; jvm 17.0.15+6
+2025-07-11 02:44:28.862 WARN  (main) [c: s: r: x: t:] o.e.j.u.DeprecationWarning Using @Deprecated Class org.eclipse.jetty.servlet.listener.ELContextCleaner
+2025-07-11 02:44:28.897 INFO  (main) [c: s: r: x: t:] o.a.s.s.CoreContainerProvider Using logger factory org.apache.logging.slf4j.Log4jLoggerFactory
+2025-07-11 02:44:28.909 INFO  (main) [c: s: r: x: t:] o.a.s.s.CoreContainerProvider  ___      _       Welcome to Apache Solr™ version 9.8.1
+2025-07-11 02:44:28.909 INFO  (main) [c: s: r: x: t:] o.a.s.s.CoreContainerProvider / __| ___| |_ _   Starting in standalone mode on port 8983
+2025-07-11 02:44:28.909 INFO  (main) [c: s: r: x: t:] o.a.s.s.CoreContainerProvider \__ \/ _ \ | '_|  Install dir: /opt/solr-9.8.1
+2025-07-11 02:44:28.909 INFO  (main) [c: s: r: x: t:] o.a.s.s.CoreContainerProvider |___/\___/_|_|    Start time: 2025-07-11T02:44:28.909747822Z
+2025-07-11 02:44:28.914 INFO  (main) [c: s: r: x: t:] o.a.s.s.CoreContainerProvider Solr started with "-XX:+CrashOnOutOfMemoryError" that will crash on any OutOfMemoryError exception. The cause of the OOME will be logged in the crash file at the following path: /var/solr/logs/jvm_crash_11.log
+2025-07-11 02:44:28.957 INFO  (main) [c: s: r: x: t:] o.a.s.s.CoreContainerProvider Solr Home: /var/solr/data (source: system property: solr.solr.home)
+2025-07-11 02:44:28.986 INFO  (main) [c: s: r: x: t:] o.a.s.c.SolrResourceLoader Added 1 libs to classloader, from paths: [/opt/solr-9.8.1/modules/ltr/lib]
+2025-07-11 02:44:28.986 INFO  (main) [c: s: r: x: t:] o.a.s.c.NodeConfig Added module ltr. libPath=/opt/solr-9.8.1/modules/ltr/lib with 1 libs
+2025-07-11 02:44:28.995 INFO  (main) [c: s: r: x: t:] o.a.s.c.SolrResourceLoader Added 82 libs to classloader, from paths: [/opt/solr-9.8.1/modules/extraction/lib]
+2025-07-11 02:44:28.995 INFO  (main) [c: s: r: x: t:] o.a.s.c.NodeConfig Added module extraction. libPath=/opt/solr-9.8.1/modules/extraction/lib with 82 libs
+2025-07-11 02:44:28.997 INFO  (main) [c: s: r: x: t:] o.a.s.c.SolrResourceLoader Added 5 libs to classloader, from paths: [/opt/solr-9.8.1/modules/langid/lib]
+2025-07-11 02:44:28.997 INFO  (main) [c: s: r: x: t:] o.a.s.c.NodeConfig Added module langid. libPath=/opt/solr-9.8.1/modules/langid/lib with 5 libs
+2025-07-11 02:44:28.999 INFO  (main) [c: s: r: x: t:] o.a.s.c.SolrResourceLoader Added 12 libs to classloader, from paths: [/opt/solr-9.8.1/modules/analysis-extras/lib]
+2025-07-11 02:44:28.999 INFO  (main) [c: s: r: x: t:] o.a.s.c.NodeConfig Added module analysis-extras. libPath=/opt/solr-9.8.1/modules/analysis-extras/lib with 12 libs
+2025-07-11 02:44:29.487 INFO  (main) [c: s: r: x: t:] o.a.s.c.SolrXmlConfig solr.xml not found in SOLR_HOME, using built-in default
+2025-07-11 02:44:29.487 INFO  (main) [c: s: r: x: t:] o.a.s.c.SolrXmlConfig Loading solr.xml from /opt/solr-9.8.1/server/solr/solr.xml
+2025-07-11 02:44:29.542 INFO  (main) [c: s: r: x: t:] o.a.s.c.SolrResourceLoader Added 1 libs to classloader, from paths: [/opt/solr-9.8.1/lib]
+2025-07-11 02:44:29.560 INFO  (main) [c: s: r: x: t:] o.a.s.c.SolrResourceLoader Added 1 libs to classloader, from paths: [/opt/solr-9.8.1/modules/ltr/lib]
+2025-07-11 02:44:29.560 INFO  (main) [c: s: r: x: t:] o.a.s.c.NodeConfig Added module ltr. libPath=/opt/solr-9.8.1/modules/ltr/lib with 1 libs
+2025-07-11 02:44:29.564 INFO  (main) [c: s: r: x: t:] o.a.s.c.SolrResourceLoader Added 82 libs to classloader, from paths: [/opt/solr-9.8.1/modules/extraction/lib]
+2025-07-11 02:44:29.565 INFO  (main) [c: s: r: x: t:] o.a.s.c.NodeConfig Added module extraction. libPath=/opt/solr-9.8.1/modules/extraction/lib with 82 libs
+2025-07-11 02:44:29.566 INFO  (main) [c: s: r: x: t:] o.a.s.c.SolrResourceLoader Added 5 libs to classloader, from paths: [/opt/solr-9.8.1/modules/langid/lib]
+2025-07-11 02:44:29.566 INFO  (main) [c: s: r: x: t:] o.a.s.c.NodeConfig Added module langid. libPath=/opt/solr-9.8.1/modules/langid/lib with 5 libs
+2025-07-11 02:44:29.567 INFO  (main) [c: s: r: x: t:] o.a.s.c.SolrResourceLoader Added 12 libs to classloader, from paths: [/opt/solr-9.8.1/modules/analysis-extras/lib]
+2025-07-11 02:44:29.567 INFO  (main) [c: s: r: x: t:] o.a.s.c.NodeConfig Added module analysis-extras. libPath=/opt/solr-9.8.1/modules/analysis-extras/lib with 12 libs
+2025-07-11 02:44:30.279 INFO  (main) [c: s: r: x: t:] o.a.s.u.t.SimplePropagator Always-on trace id generation enabled.
+2025-07-11 02:44:30.730 WARN  (main) [c: s: r: x: t:] o.a.s.u.StartupLoggingUtils Jetty request logging enabled. Will retain logs for last 3 days. See chapter "Configuring Logging" in reference guide for how to configure.
+2025-07-11 02:44:30.735 INFO  (main) [c: s: r: x: t:] o.a.s.c.CoreContainer Initializing authorization plugin: solr.RuleBasedAuthorizationPlugin
+2025-07-11 02:44:30.751 INFO  (main) [c: s: r: x: t:] o.a.s.c.CoreContainer Initializing authentication plugin: solr.BasicAuthPlugin
+2025-07-11 02:44:30.762 WARN  (main) [c: s: r: x: t:] o.a.s.c.CoreContainer Solr authentication is enabled, but SSL is off.  Consider enabling SSL to protect user credentials and data with encryption.
+2025-07-11 02:44:31.050 INFO  (main) [c: s: r: x: t:] o.a.s.c.CorePropertiesLocator Found 1 core definitions underneath /var/solr/data
+2025-07-11 02:44:31.051 INFO  (main) [c: s: r: x: t:] o.a.s.c.CorePropertiesLocator Cores are: [drupal]
+2025-07-11 02:44:31.227 INFO  (coreLoadExecutor-13-thread-1) [c: s: r: x:drupal t:] o.a.s.c.SolrConfig Using Lucene MatchVersion: 9.11.1
+2025-07-11 02:44:31.236 INFO  (coreLoadExecutor-13-thread-1) [c: s: r: x:drupal t:] o.a.s.u.SolrIndexConfig IndexWriter infoStream solr logging is enabled
+2025-07-11 02:44:31.296 INFO  (coreLoadExecutor-13-thread-1) [c: s: r: x:drupal t:] o.a.s.s.IndexSchema Schema name=drupal-4.3.10-solr-9.x-0
+2025-07-11 02:44:31.305 WARN  (main) [c: s: r: x: t:] o.g.j.m.i.MessagingBinders A class jakarta.activation.DataSource for a default provider MessageBodyWriter<jakarta.activation.DataSource> was not found. The provider is not available.
+2025-07-11 02:44:31.748 INFO  (main) [c: s: r: x: t:] o.a.s.j.SolrRequestAuthorizer Creating a new SolrRequestAuthorizer
+2025-07-11 02:44:31.940 INFO  (main) [c: s: r: x: t:] o.e.j.s.h.ContextHandler Started o.e.j.w.WebAppContext@4b629f13{solr-jetty-context.xml,/solr,file:///opt/solr-9.8.1/server/solr-webapp/webapp/,AVAILABLE}{/opt/solr-9.8.1/server/solr-webapp/webapp}
+2025-07-11 02:44:31.949 INFO  (main) [c: s: r: x: t:] o.e.j.s.RequestLogWriter Opened /var/solr/logs/2025_07_11.request.log
+2025-07-11 02:44:31.956 INFO  (main) [c: s: r: x: t:] o.e.j.s.AbstractConnector Started ServerConnector@40f1be1b{HTTP/1.1, (http/1.1, h2c)}{0.0.0.0:8983}
+2025-07-11 02:44:31.957 INFO  (main) [c: s: r: x: t:] o.e.j.s.Server Started Server@773cbf4f{STARTING}[10.0.22,sto=0] @13471ms
+2025-07-11 02:44:32.525 INFO  (coreLoadExecutor-13-thread-1) [c: s: r: x:drupal t:] o.a.s.s.IndexSchema Loaded schema drupal-4.3.10-solr-9.x-0/1.6 with uniqueid field id
+2025-07-11 02:44:32.958 INFO  (coreLoadExecutor-13-thread-1) [c: s: r: x:drupal t:] o.a.s.c.CoreContainer Creating SolrCore 'drupal' using configuration from instancedir /var/solr/data/drupal, trusted=true
+2025-07-11 02:44:33.013 INFO  (coreLoadExecutor-13-thread-1) [c: s: r: x:drupal t:] o.a.s.c.SolrCore Opening new SolrCore at [/var/solr/data/drupal], dataDir=[/var/solr/data/drupal/data/]
+2025-07-11 02:44:33.025 WARN  (coreLoadExecutor-13-thread-1) [c: s: r: x:drupal t:] o.a.s.D.s.CircuitBreakerManager Solr loaded a deprecated plugin/analysis class [solr.CircuitBreakerManager]. Please consult documentation how to replace it accordingly.
+2025-07-11 02:44:33.026 WARN  (coreLoadExecutor-13-thread-1) [c: s: r: x:drupal t:] o.a.s.u.c.CircuitBreakerManager CircuitBreakerManager is deprecated. Use individual Circuit Breakers instead
+2025-07-11 02:44:33.027 INFO  (coreLoadExecutor-13-thread-1) [c: s: r: x:drupal t:] o.a.s.u.c.CircuitBreakerRegistry Registered circuit breaker CircuitBreakerManager for request type(s) QUERY
+2025-07-11 02:44:33.547 INFO  (coreLoadExecutor-13-thread-1) [c: s: r: x:drupal t:] o.a.s.j.SolrRequestAuthorizer Creating a new SolrRequestAuthorizer
+2025-07-11 02:44:33.573 INFO  (coreLoadExecutor-13-thread-1) [c: s: r: x:drupal t:] o.a.s.u.UpdateHandler Using UpdateLog implementation: org.apache.solr.update.UpdateLog
+2025-07-11 02:44:33.573 WARN  (coreLoadExecutor-13-thread-1) [c: s: r: x:drupal t:] o.a.s.u.UpdateLog numVersionBuckets is obsolete
+2025-07-11 02:44:33.581 INFO  (coreLoadExecutor-13-thread-1) [c: s: r: x:drupal t:] o.a.s.u.UpdateLog Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10
+2025-07-11 02:44:33.582 INFO  (coreLoadExecutor-13-thread-1) [c: s: r: x:drupal t:] o.a.s.u.CommitTracker Hard AutoCommit: if uncommitted for 15000ms; 
+2025-07-11 02:44:33.583 INFO  (coreLoadExecutor-13-thread-1) [c: s: r: x:drupal t:] o.a.s.u.CommitTracker Soft AutoCommit: if uncommitted for 5000ms; 
+2025-07-11 02:44:33.695 INFO  (coreLoadExecutor-13-thread-1) [c: s: r: x:drupal t:] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: /var/solr/data/drupal/conf
+2025-07-11 02:44:33.716 INFO  (coreLoadExecutor-13-thread-1) [c: s: r: x:drupal t:] o.a.s.s.DirectSolrSpellChecker init: {name=en, field=spellcheck_en, classname=solr.DirectSolrSpellChecker, distanceMeasure=internal, accuracy=0.5, maxEdits=2, minPrefix=1, maxInspections=5, minQueryLength=4, maxQueryFrequency=0.01, thresholdTokenFrequency=.01, onlyMorePopular=true}
+2025-07-11 02:44:33.718 INFO  (coreLoadExecutor-13-thread-1) [c: s: r: x:drupal t:] o.a.s.s.DirectSolrSpellChecker init: {name=und, field=spellcheck_und, classname=solr.DirectSolrSpellChecker, distanceMeasure=internal, accuracy=0.5, maxEdits=2, minPrefix=1, maxInspections=5, minQueryLength=4, maxQueryFrequency=0.01, thresholdTokenFrequency=.01, onlyMorePopular=true}
+2025-07-11 02:44:33.720 INFO  (coreLoadExecutor-13-thread-1) [c: s: r: x:drupal t:] o.a.s.h.c.SuggestComponent Initializing SuggestComponent
+2025-07-11 02:44:33.724 INFO  (coreLoadExecutor-13-thread-1) [c: s: r: x:drupal t:] o.a.s.s.s.SolrSuggester init: {name=en, indexPath=./en, lookupImpl=AnalyzingInfixLookupFactory, dictionaryImpl=DocumentDictionaryFactory, field=twm_suggest, suggestAnalyzerFieldType=text_en, contextField=sm_context_tags, buildOnCommit=false, buildOnStartup=false}
+2025-07-11 02:44:33.740 INFO  (coreLoadExecutor-13-thread-1) [c: s: r: x:drupal t:] o.a.s.s.s.SolrSuggester Dictionary loaded with params: {name=en, indexPath=./en, lookupImpl=AnalyzingInfixLookupFactory, dictionaryImpl=DocumentDictionaryFactory, field=twm_suggest, suggestAnalyzerFieldType=text_en, contextField=sm_context_tags, buildOnCommit=false, buildOnStartup=false}
+2025-07-11 02:44:33.741 INFO  (coreLoadExecutor-13-thread-1) [c: s: r: x:drupal t:] o.a.s.s.s.SolrSuggester init: {name=und, indexPath=./und, lookupImpl=AnalyzingInfixLookupFactory, dictionaryImpl=DocumentDictionaryFactory, field=twm_suggest, suggestAnalyzerFieldType=text_und, contextField=sm_context_tags, buildOnCommit=false, buildOnStartup=false}
+2025-07-11 02:44:33.743 INFO  (coreLoadExecutor-13-thread-1) [c: s: r: x:drupal t:] o.a.s.s.s.SolrSuggester Dictionary loaded with params: {name=und, indexPath=./und, lookupImpl=AnalyzingInfixLookupFactory, dictionaryImpl=DocumentDictionaryFactory, field=twm_suggest, suggestAnalyzerFieldType=text_und, contextField=sm_context_tags, buildOnCommit=false, buildOnStartup=false}
+2025-07-11 02:44:33.763 INFO  (coreLoadExecutor-13-thread-1) [c: s: r: x:drupal t:] o.a.s.h.ReplicationHandler Commits will be reserved for 10000 ms
+2025-07-11 02:44:33.816 INFO  (searcherExecutor-15-thread-1-processing-drupal) [c: s: r: x:drupal t:] o.a.s.c.S.Request webapp=null path=null params={q=static+firstSearcher+warming+in+solrconfig.xml&distrib=false&event=firstSearcher} hits=0 status=0 QTime=48
+2025-07-11 02:44:33.816 INFO  (searcherExecutor-15-thread-1-processing-drupal) [c: s: r: x:drupal t:] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2025-07-11 02:44:33.816 INFO  (searcherExecutor-15-thread-1-processing-drupal) [c: s: r: x:drupal t:] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: en
+2025-07-11 02:44:33.816 INFO  (searcherExecutor-15-thread-1-processing-drupal) [c: s: r: x:drupal t:] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: und
+2025-07-11 02:44:33.827 INFO  (searcherExecutor-15-thread-1-processing-drupal) [c: s: r: x:drupal t:] o.a.s.c.SolrCore Registered new searcher autowarm time: 0 ms
+2025-07-11 02:45:04.672 INFO  (qtp893591815-29-null-6) [c: s: r: x: t:null-6] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1752201906389} status=0 QTime=9
+2025-07-11 02:45:04.690 INFO  (qtp893591815-60-null-8) [c: s: r: x: t:null-8] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1752201906389} status=0 QTime=29
+2025-07-11 02:45:04.690 INFO  (qtp893591815-28-null-7) [c: s: r: x: t:null-7] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1752201906389} status=0 QTime=29
+2025-07-11 02:45:09.464 INFO  (qtp893591815-32-null-10) [c: s: r: x: t:null-10] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1752201906389} status=0 QTime=0
+2025-07-11 02:45:09.471 INFO  (qtp893591815-57-null-11) [c: s: r: x:drupal t:null-11] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={numTerms=0&show=index&wt=json&_=1752201910873} status=0 QTime=6
+2025-07-11 02:45:09.479 INFO  (qtp893591815-29-null-9) [c: s: r: x: t:null-9] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1752201906389} status=0 QTime=15
+2025-07-11 02:45:09.480 INFO  (qtp893591815-60-null-12) [c: s: r: x:drupal t:null-12] o.a.s.c.S.Request webapp=/solr path=/replication params={wt=json&command=details&_=1752201910873} status=0 QTime=6
+2025-07-11 02:45:09.490 INFO  (qtp893591815-31-null-14) [c: s: r: x:drupal t:null-14] o.a.s.c.S.Request webapp=/solr path=/admin/ping params={action=status&wt=json&_=1752201906389&ts=1752201906389} status=503 QTime=2
+2025-07-11 02:45:09.500 INFO  (qtp893591815-32-null-13) [c: s: r: x:drupal t:null-13] o.a.s.c.S.Request webapp=/solr path=/admin/system params={wt=json&_=1752201910873} status=0 QTime=12
+2025-07-11 02:45:27.931 INFO  (qtp893591815-60-null-23) [c: s: r: x: t:null-23] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1752201925367} status=0 QTime=0
+2025-07-11 02:45:27.944 INFO  (qtp893591815-31-null-24) [c: s: r: x: t:null-24] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1752201925368} status=0 QTime=10
+2025-07-11 02:45:27.961 INFO  (qtp893591815-32-null-25) [c: s: r: x: t:null-25] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1752201925368} status=0 QTime=9
+2025-07-11 02:45:33.553 INFO  (qtp893591815-31-null-27) [c: s: r: x: t:null-27] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1752201925367} status=0 QTime=0
+2025-07-11 02:45:33.563 INFO  (qtp893591815-33-null-26) [c: s: r: x: t:null-26] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1752201925368} status=0 QTime=10
+2025-07-11 02:45:33.584 INFO  (qtp893591815-60-null-28) [c: s: r: x: t:null-28] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1752201925368} status=0 QTime=12
+2025-07-11 02:45:50.544 INFO  (qtp893591815-29-null-29) [c: s: r: x:drupal t:null-29] o.a.s.c.S.Request webapp=/solr path=/admin/system params={json.nl=flat&wt=json} status=0 QTime=8
+2025-07-11 02:45:50.836 INFO  (qtp893591815-33-null-30) [c: s: r: x: t:null-30] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={json.nl=flat&wt=json} status=0 QTime=7
+2025-07-11 02:45:50.867 INFO  (qtp893591815-28-null-31) [c: s: r: x:drupal t:null-31] o.a.s.c.S.Request webapp=/solr path=/admin/ping params={json.nl=flat&omitHeader=false&wt=json} hits=0 status=0 QTime=6
+2025-07-11 02:45:50.868 INFO  (qtp893591815-28-null-31) [c: s: r: x:drupal t:null-31] o.a.s.c.S.Request webapp=/solr path=/admin/ping params={json.nl=flat&omitHeader=false&wt=json} status=0 QTime=6
+2025-07-11 02:45:50.877 INFO  (qtp893591815-57-null-32) [c: s: r: x:drupal t:null-32] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={json.nl=flat&wt=json} status=0 QTime=1
+2025-07-11 02:45:50.931 INFO  (qtp893591815-55-null-33) [c: s: r: x:drupal t:null-33] o.a.s.c.S.Request webapp=/solr path=/admin/mbeans params={stats=true?omitHeader%3Dfalse&wt=phps} status=0 QTime=23
+2025-07-11 02:45:50.955 INFO  (qtp893591815-59-null-34) [c: s: r: x:drupal t:null-34] o.a.s.c.S.Request webapp=/solr path=/admin/system params={json.nl=flat&wt=json} status=0 QTime=5
+2025-07-11 02:45:51.028 INFO  (qtp893591815-58-null-35) [c: s: r: x:drupal t:null-35] o.a.s.c.S.Request webapp=/solr path=/select params={q=*:*&json.facet={"maxVersion":"max(_version_)"}&json.nl=flat&omitHeader=true&fl=*,score&start=0&rows=1&wt=json} hits=0 status=0 QTime=36
+2025-07-11 02:45:56.958 INFO  (qtp893591815-32-null-36) [c: s: r: x: t:null-36] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={json.nl=flat&wt=json} status=0 QTime=7
+2025-07-11 02:45:56.987 INFO  (qtp893591815-60-null-37) [c: s: r: x:drupal t:null-37] o.a.s.c.S.Request webapp=/solr path=/admin/ping params={json.nl=flat&omitHeader=false&wt=json} hits=0 status=0 QTime=1
+2025-07-11 02:45:56.987 INFO  (qtp893591815-60-null-37) [c: s: r: x:drupal t:null-37] o.a.s.c.S.Request webapp=/solr path=/admin/ping params={json.nl=flat&omitHeader=false&wt=json} status=0 QTime=2
+2025-07-11 02:46:01.221 INFO  (qtp893591815-29-null-38) [c: s: r: x: t:null-38] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={json.nl=flat&wt=json} status=0 QTime=7
+2025-07-11 02:46:01.247 INFO  (qtp893591815-33-null-39) [c: s: r: x:drupal t:null-39] o.a.s.c.S.Request webapp=/solr path=/admin/ping params={json.nl=flat&omitHeader=false&wt=json} hits=0 status=0 QTime=1
+2025-07-11 02:46:01.248 INFO  (qtp893591815-33-null-39) [c: s: r: x:drupal t:null-39] o.a.s.c.S.Request webapp=/solr path=/admin/ping params={json.nl=flat&omitHeader=false&wt=json} status=0 QTime=2
+2025-07-11 02:46:01.255 INFO  (qtp893591815-28-null-40) [c: s: r: x:drupal t:null-40] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={json.nl=flat&wt=json} status=0 QTime=1
+2025-07-11 02:46:01.279 INFO  (qtp893591815-57-null-41) [c: s: r: x:drupal t:null-41] o.a.s.c.S.Request webapp=/solr path=/admin/mbeans params={stats=true?omitHeader%3Dfalse&wt=phps} status=0 QTime=6
+2025-07-11 02:46:01.297 INFO  (qtp893591815-55-null-42) [c: s: r: x:drupal t:null-42] o.a.s.c.S.Request webapp=/solr path=/admin/system params={json.nl=flat&wt=json} status=0 QTime=7
+2025-07-11 02:46:01.328 INFO  (qtp893591815-59-null-43) [c: s: r: x:drupal t:null-43] o.a.s.c.S.Request webapp=/solr path=/select params={q=*:*&json.facet={"maxVersion":"max(_version_)"}&json.nl=flat&omitHeader=true&fl=*,score&start=0&rows=1&wt=json} hits=0 status=0 QTime=2
+2025-07-11 02:46:50.222 INFO  (qtp893591815-58-null-44) [c: s: r: x: t:null-44] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={json.nl=flat&wt=json} status=0 QTime=7
+2025-07-11 02:46:50.247 INFO  (qtp893591815-32-null-45) [c: s: r: x:drupal t:null-45] o.a.s.c.S.Request webapp=/solr path=/admin/ping params={json.nl=flat&omitHeader=false&wt=json} hits=0 status=0 QTime=1
+2025-07-11 02:46:50.247 INFO  (qtp893591815-32-null-45) [c: s: r: x:drupal t:null-45] o.a.s.c.S.Request webapp=/solr path=/admin/ping params={json.nl=flat&omitHeader=false&wt=json} status=0 QTime=2
+2025-07-11 02:46:52.937 INFO  (qtp893591815-60-null-46) [c: s: r: x:drupal t:null-46] o.a.s.c.S.Request webapp=/solr path=/select params={q=*:*&json.nl=flat&omitHeader=true&TZ=America/Los_Angeles&fl=ss_search_api_id,ss_search_api_language,score,hash&start=0&fq=%2Bindex_id:content&fq=ss_search_api_language:("en"+"und")&rows=0&wt=json} hits=0 status=0 QTime=16
+2025-07-11 02:46:56.081 INFO  (qtp893591815-29-null-47) [c: s: r: x:drupal t:null-47] o.a.s.u.p.LogUpdateProcessorFactory webapp=/solr path=/update params={json.nl=flat&commitWithin=1000&omitHeader=false&wt=json}{add=[1w9ewc-content-entity:node/1:en (1837316981115584512), 1w9ewc-content-entity:node/2:en (1837316981200519168), 1w9ewc-content-entity:node/3:en (1837316981202616320), 1w9ewc-content-entity:node/4:en (1837316981203664896), 1w9ewc-content-entity:node/5:en (1837316981204713472), 1w9ewc-content-entity:node/6:en (1837316981206810624), 1w9ewc-content-entity:node/7:en (1837316981208907776), 1w9ewc-content-entity:node/8:en (1837316981209956352), 1w9ewc-content-entity:node/9:en (1837316981211004928)]} 0 113
+2025-07-11 02:46:56.453 INFO  (qtp893591815-33-null-48) [c: s: r: x:drupal t:null-48] o.a.s.c.S.Request webapp=/solr path=/select params={q=*:*&json.nl=flat&omitHeader=true&TZ=America/Los_Angeles&fl=ss_search_api_id,ss_search_api_language,score,hash&start=0&fq=%2Bindex_id:content&fq=ss_search_api_language:("en"+"und")&rows=0&wt=json} hits=0 status=0 QTime=2
+2025-07-11 02:46:57.254 INFO  (searcherExecutor-15-thread-2-processing-drupal) [c: s: r: x:drupal t:] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2025-07-11 02:46:57.267 INFO  (searcherExecutor-15-thread-2-processing-drupal) [c: s: r: x:drupal t:] o.a.s.c.SolrCore Registered new searcher autowarm time: 6 ms
+2025-07-11 02:47:05.504 INFO  (qtp893591815-60-null-51) [c: s: r: x: t:null-51] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1752202026237} status=0 QTime=1
+2025-07-11 02:47:05.513 INFO  (qtp893591815-31-null-50) [c: s: r: x: t:null-50] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1752202026237} status=0 QTime=10
+2025-07-11 02:47:09.469 INFO  (qtp893591815-31-null-53) [c: s: r: x: t:null-53] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1752202026237} status=0 QTime=0
+2025-07-11 02:47:09.480 INFO  (qtp893591815-32-null-52) [c: s: r: x:drupal t:null-52] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1752202026263} status=0 QTime=11
+2025-07-11 02:47:09.485 INFO  (qtp893591815-58-null-54) [c: s: r: x: t:null-54] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1752202026237} status=0 QTime=8
+2025-07-11 02:47:10.870 INFO  (qtp893591815-58-null-56) [c: s: r: x: t:null-56] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1752202026237} status=0 QTime=0
+2025-07-11 02:47:10.879 INFO  (qtp893591815-60-null-55) [c: s: r: x: t:null-55] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1752202026237} status=0 QTime=9
+2025-07-11 02:47:10.882 INFO  (qtp893591815-31-null-57) [c: s: r: x:drupal t:null-57] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1752202026263} status=0 QTime=2
+2025-07-11 02:47:12.106 INFO  (qtp893591815-31-null-59) [c: s: r: x: t:null-59] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1752202026237} status=0 QTime=0
+2025-07-11 02:47:12.113 INFO  (qtp893591815-32-null-58) [c: s: r: x: t:null-58] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1752202026237} status=0 QTime=7
+2025-07-11 02:47:12.114 INFO  (qtp893591815-58-null-60) [c: s: r: x:drupal t:null-60] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1752202032265} status=0 QTime=2
+2025-07-11 02:47:13.070 INFO  (qtp893591815-32-null-61) [c: s: r: x: t:null-61] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1752202026237} status=0 QTime=0
+2025-07-11 02:47:13.079 INFO  (qtp893591815-60-null-62) [c: s: r: x: t:null-62] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1752202026237} status=0 QTime=9
+2025-07-11 02:47:13.081 INFO  (qtp893591815-31-null-63) [c: s: r: x:drupal t:null-63] o.a.s.c.S.Request webapp=/solr path=/admin/file params={wt=json&_=1752202033143} status=0 QTime=4
+2025-07-11 02:47:13.523 INFO  (qtp893591815-57-null-64) [c: s: r: x:drupal t:null-64] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={numTerms=0&show=index&wt=json&_=1752202026263} status=0 QTime=3
+2025-07-11 02:47:13.526 INFO  (qtp893591815-28-null-65) [c: s: r: x:drupal t:null-65] o.a.s.c.S.Request webapp=/solr path=/admin/system params={wt=json&_=1752202026263} status=0 QTime=6
+2025-07-11 02:47:11.678 INFO  (qtp893591815-60-null-66) [c: s: r: x:drupal t:null-66] o.a.s.c.S.Request webapp=/solr path=/admin/ping params={wt=json&_=1752202026237&ts=1752202026237} hits=9 status=0 QTime=2
+2025-07-11 02:47:11.678 INFO  (qtp893591815-60-null-66) [c: s: r: x:drupal t:null-66] o.a.s.c.S.Request webapp=/solr path=/admin/ping params={wt=json&_=1752202026237&ts=1752202026237} status=0 QTime=3
+2025-07-11 02:47:13.806 INFO  (qtp893591815-60-null-69) [c: s: r: x: t:null-69] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1752202026237} status=0 QTime=0
+2025-07-11 02:47:13.806 INFO  (qtp893591815-26-null-67) [c: s: r: x:drupal t:null-67] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1752202032265} status=0 QTime=0
+2025-07-11 02:47:13.815 INFO  (qtp893591815-30-null-68) [c: s: r: x: t:null-68] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1752202026237} status=0 QTime=9
+2025-07-11 02:47:16.530 INFO  (qtp893591815-28-null-72) [c: s: r: x: t:null-72] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1752202026237} status=0 QTime=0
+2025-07-11 02:47:16.530 INFO  (qtp893591815-32-null-70) [c: s: r: x:drupal t:null-70] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1752202032265} status=0 QTime=0
+2025-07-11 02:47:16.534 INFO  (qtp893591815-31-null-71) [c: s: r: x:drupal t:null-71] o.a.s.c.S.Request webapp=/solr path=/select params={q=*:*&indent=true&q.op=OR&useParams=&_=1752202036281} hits=9 status=0 QTime=4
+2025-07-11 02:47:16.538 INFO  (qtp893591815-61-null-73) [c: s: r: x: t:null-73] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1752202026237} status=0 QTime=7
+2025-07-11 02:47:18.812 INFO  (qtp893591815-33-null-75) [c: s: r: x:drupal t:null-75] o.a.s.c.S.Request webapp=/solr path=/admin/ping params={action=status&wt=json&_=1752202026237&ts=1752202026237} status=503 QTime=0
+2025-07-11 02:47:18.816 INFO  (qtp893591815-27-null-74) [c: s: r: x:drupal t:null-74] o.a.s.c.S.Request webapp=/solr path=/replication params={wt=json&command=details&_=1752202026263} status=0 QTime=4
+2025-07-11 03:01:08.506 INFO  (JettyShutdownThread) [c: s: r: x: t:] o.e.j.s.Server Stopped Server@773cbf4f{STOPPING}[10.0.22,sto=0]
+2025-07-11 03:01:08.517 INFO  (JettyShutdownThread) [c: s: r: x: t:] o.e.j.s.AbstractConnector Stopped ServerConnector@40f1be1b{HTTP/1.1, (http/1.1, h2c)}{0.0.0.0:8983}
+2025-07-11 03:01:08.529 INFO  (JettyShutdownThread) [c: s: r: x: t:] o.a.s.c.CoreContainer Shutting down CoreContainer instance=1047000562
+2025-07-11 03:01:08.533 INFO  (coreCloseExecutor-21-thread-1) [c: s: r: x:drupal t:] o.a.s.c.SolrCore CLOSING SolrCore org.apache.solr.core.SolrCore@65a790c8 drupal
+2025-07-11 03:01:08.534 INFO  (coreCloseExecutor-21-thread-1) [c: s: r: x:drupal t:] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.core.drupal tag=SolrCore@65a790c8
+2025-07-11 03:01:08.569 INFO  (coreCloseExecutor-21-thread-1) [c: s: r: x:drupal t:] o.a.s.u.DirectUpdateHandler2 Committing on IndexWriter.close()  ... SKIPPED (unnecessary).
+2025-07-11 03:01:08.589 INFO  (JettyShutdownThread) [c: s: r: x: t:] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.node tag=null
+2025-07-11 03:01:08.602 INFO  (JettyShutdownThread) [c: s: r: x: t:] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.jvm tag=null
+2025-07-11 03:01:08.606 INFO  (JettyShutdownThread) [c: s: r: x: t:] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.jetty tag=null
+2025-07-11 03:01:08.625 INFO  (JettyShutdownThread) [c: s: r: x: t:] o.e.j.s.h.ContextHandler Stopped o.e.j.w.WebAppContext@4b629f13{solr-jetty-context.xml,/solr,null,STOPPED}{/opt/solr-9.8.1/server/solr-webapp/webapp}
