@@ -1,0 +1,33 @@
+uuid: d6d93e9b-86e4-4731-ac69-1769821e4295
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_material
+    - node.type.product
+    - taxonomy.vocabulary.material
+  content:
+    - 'taxonomy_term:material:39b4f496-9c66-41fb-99e4-85d27db8d7cb'
+id: node.product.field_material
+field_name: field_material
+entity_type: node
+bundle: product
+label: Material
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    target_uuid: 39b4f496-9c66-41fb-99e4-85d27db8d7cb
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      material: material
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

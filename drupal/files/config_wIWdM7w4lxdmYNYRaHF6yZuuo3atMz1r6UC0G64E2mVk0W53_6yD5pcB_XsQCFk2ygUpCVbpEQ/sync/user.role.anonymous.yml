@@ -3,6 +3,8 @@ langcode: en
 status: true
 dependencies:
   module:
+    - commerce_checkout
+    - commerce_product
     - media
     - system
 _core:
@@ -12,5 +14,7 @@ label: 'Anonymous user'
 weight: 0
 is_admin: false
 permissions:
+  - 'access checkout'
   - 'access content'
+  - 'view commerce_product'
   - 'view media'

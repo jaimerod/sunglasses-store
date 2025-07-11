@@ -6,6 +6,10 @@ dependencies:
     - filter.format.full_html
     - filter.format.webform_default
   module:
+    - commerce_checkout
+    - commerce_order
+    - commerce_payment
+    - commerce_product
     - file
     - filter
     - media
@@ -18,9 +22,13 @@ label: 'Authenticated user'
 weight: 1
 is_admin: false
 permissions:
+  - 'access checkout'
   - 'access content'
   - 'access shortcuts'
   - 'delete own files'
+  - 'manage own commerce_payment_method'
   - 'use text format full_html'
   - 'use text format webform_default'
+  - 'view commerce_product'
   - 'view media'
+  - 'view own commerce_order'

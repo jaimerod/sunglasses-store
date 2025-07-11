@@ -32,3 +32,5 @@ hidden:
   field_hide_on_desktop: true
   field_hide_on_mobile: true
   field_hide_on_tablet: true
+  langcode: true
+  search_api_excerpt: true

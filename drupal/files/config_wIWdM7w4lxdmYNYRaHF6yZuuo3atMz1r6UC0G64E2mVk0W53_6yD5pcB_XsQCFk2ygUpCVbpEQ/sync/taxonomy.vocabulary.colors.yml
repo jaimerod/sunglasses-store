@@ -1,0 +1,9 @@
+uuid: 54a70fca-4bff-4ada-a78b-7c2f61f68e01
+langcode: en
+status: true
+dependencies: {  }
+name: Colors
+vid: colors
+description: null
+weight: 0
+new_revision: false

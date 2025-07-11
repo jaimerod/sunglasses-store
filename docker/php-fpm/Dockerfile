@@ -15,7 +15,7 @@ RUN apt-get update && apt-get install -y unzip libpng-dev libjpeg-dev git libfre
 
 # PHP Extension Install
 RUN docker-php-ext-configure gd --with-freetype --with-jpeg --with-webp
-RUN docker-php-ext-install opcache pdo_mysql gd
+RUN docker-php-ext-install opcache pdo_mysql gd bcmath
 
 # Install composer
 COPY --from=composer /usr/bin/composer /usr/bin/composer

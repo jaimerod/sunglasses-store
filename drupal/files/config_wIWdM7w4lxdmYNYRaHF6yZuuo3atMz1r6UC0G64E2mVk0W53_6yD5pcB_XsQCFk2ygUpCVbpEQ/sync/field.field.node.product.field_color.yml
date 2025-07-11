@@ -1,0 +1,33 @@
+uuid: 985e9292-781f-47da-9d3b-ed4373f413b2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_color
+    - node.type.product
+    - taxonomy.vocabulary.colors
+  content:
+    - 'taxonomy_term:colors:30417b0a-3f92-456f-80dc-7425fe1ee38d'
+id: node.product.field_color
+field_name: field_color
+entity_type: node
+bundle: product
+label: Color
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    target_uuid: 30417b0a-3f92-456f-80dc-7425fe1ee38d
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      colors: colors
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

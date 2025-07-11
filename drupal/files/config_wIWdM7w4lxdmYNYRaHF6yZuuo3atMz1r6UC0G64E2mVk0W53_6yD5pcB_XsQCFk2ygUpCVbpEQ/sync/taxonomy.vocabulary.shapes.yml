@@ -1,0 +1,9 @@
+uuid: 968bdadb-3b2e-4cd5-b69c-3816ca807e0b
+langcode: en
+status: true
+dependencies: {  }
+name: Shapes
+vid: shapes
+description: null
+weight: 0
+new_revision: false

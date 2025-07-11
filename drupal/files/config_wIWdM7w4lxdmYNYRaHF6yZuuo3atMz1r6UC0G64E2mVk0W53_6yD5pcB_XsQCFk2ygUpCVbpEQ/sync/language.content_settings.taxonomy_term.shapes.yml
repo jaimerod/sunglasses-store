@@ -1,0 +1,11 @@
+uuid: 67ecad52-a98e-412b-b11d-be7139c95c39
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.shapes
+id: taxonomy_term.shapes
+target_entity_type_id: taxonomy_term
+target_bundle: shapes
+default_langcode: site_default
+language_alterable: false

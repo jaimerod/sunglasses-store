@@ -1,6 +1,7 @@
 _core:
   default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc
 module:
+  address: 0
   admin_toolbar: 0
   automated_cron: 0
   ban: 0
@@ -8,6 +9,17 @@ module:
   block_content: 0
   breakpoint: 0
   ckeditor5: 0
+  commerce: 0
+  commerce_cart: 0
+  commerce_checkout: 0
+  commerce_number_pattern: 0
+  commerce_order: 0
+  commerce_payment: 0
+  commerce_price: 0
+  commerce_product: 0
+  commerce_promotion: 0
+  commerce_store: 0
+  commerce_tax: 0
   composer_deploy: 0
   config: 0
   contextual: 0
@@ -15,6 +27,8 @@ module:
   devel: 0
   dynamic_page_cache: 0
   editor: 0
+  entity: 0
+  entity_reference_revisions: 0
   field: 0
   field_group: 0
   field_ui: 0
@@ -24,6 +38,8 @@ module:
   help: 0
   honeypot: 0
   image: 0
+  inline_entity_form: 0
+  language: 0
   layout_builder: 0
   layout_discovery: 0
   link: 0
@@ -39,10 +55,16 @@ module:
   path: 0
   path_alias: 0
   phpass: 0
+  profile: 0
   quicklink: 0
+  search_api: 0
+  search_api_autocomplete: 0
+  search_api_solr: 0
+  search_api_solr_autocomplete: 0
   seckit: 0
   settings_tray: 0
   shortcut: 0
+  state_machine: 0
   syslog: 0
   system: 0
   taxonomy: 0
