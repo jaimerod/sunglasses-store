@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className="flex flex-col min-h-screen bg-background text-foreground font-sans">
-        <nav className="flex items-center justify-between px-6 py-4 shadow-md bg-white dark:bg-black sticky top-0 z-10">
+        <nav className="flex items-center justify-between px-6 py-4 shadow-md bg-white sticky top-0 z-10">
           <Link href="/" className="text-2xl font-bold">
             🕶️ Sunglass Store
           </Link>
@@ -45,7 +45,7 @@ export default function RootLayout({ children }) {
 
         <main className="flex-grow">{children}</main>
 
-        <footer className="bg-gray-100 dark:bg-gray-900 text-gray-700 dark:text-gray-300 py-6 mt-12">
+        <footer className="bg-gray-100 text-gray-700 py-6 mt-12">
           <div className="container mx-auto flex justify-center space-x-8 items-center">
             {/* Social icons */}
             <a

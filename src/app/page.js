@@ -97,9 +97,9 @@ export default function HomePage() {
       {/* Header & Introduction */}
       <section className="mb-12 text-center max-w-3xl mx-auto">
         <h1 className="text-4xl font-extrabold mb-4">Welcome to Sunglass Store</h1>
-        <p className="text-lg text-gray-700 dark:text-gray-300">
+        <p className="text-lg text-gray-700">
           Discover the latest styles in eyewear, designed for comfort and UV protection.
-          Whether you're hitting the beach or the city streets, we have sunglasses for every style and occasion.
+          Whether you&apos;re hitting the beach or the city streets, we have sunglasses for every style and occasion.
         </p>
       </section>
 
@@ -145,7 +145,7 @@ export default function HomePage() {
           </button>
         </form>
         {signupMessage && (
-          <p className="mt-4 text-center text-green-700 dark:text-green-400">{signupMessage}</p>
+          <p className="mt-4 text-center text-green-700">{signupMessage}</p>
         )}
       </section>
     </main>

@@ -75,9 +75,9 @@ export default function CartPage() {
     <main className="p-8 max-w-5xl mx-auto">
       <h1 className="text-3xl font-semibold mb-6">Your Cart</h1>
 
-      <table className="w-full border-collapse border border-gray-300 dark:border-gray-700">
+      <table className="w-full border-collapse border border-gray-300">
         <thead>
-          <tr className="bg-gray-100 dark:bg-gray-800">
+          <tr className="bg-gray-100">
             <th className="border px-4 py-2">Image</th>
             <th className="border px-4 py-2 text-left">Product</th>
             <th className="border px-4 py-2">Price</th>
@@ -88,7 +88,7 @@ export default function CartPage() {
         </thead>
         <tbody>
           {cartItems.map(({ product, qty }) => (
-            <tr key={product.id} className="hover:bg-gray-50 dark:hover:bg-gray-900">
+            <tr key={product.id} className="hover:bg-gray-50">
               <td className="border px-2 py-2 text-center">
                 <img
                   src={product.image}
@@ -128,7 +128,7 @@ export default function CartPage() {
           ))}
         </tbody>
         <tfoot>
-          <tr className="bg-gray-100 dark:bg-gray-800 font-semibold">
+          <tr className="bg-gray-100 font-semibold">
             <td colSpan={4} className="border px-4 py-2 text-right">
               Total:
             </td>
